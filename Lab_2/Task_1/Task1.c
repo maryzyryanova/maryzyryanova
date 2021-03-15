@@ -2,15 +2,15 @@
 #include <stdlib.h>
 #include "Task1.h"
 
-int main()
+int main(void)
 {
     unsigned int number, year, select;
     float cost, value, distance;
-    while(1)
+    while (1)
     {
         Menu();
         printf("Enter the number of the function: ");
-        switch(EnterTheNumber(number))
+        switch (EnterTheNumber(number))
         {
             case 1: 
                 clrscr();
@@ -38,7 +38,7 @@ int main()
                 break;
             case 5:
             clrscr();
-                presentData(distance,year,value,cost);
+                presentData(distance, year, value, cost);
                 break;
             case 6:
                 clrscr();
@@ -78,7 +78,7 @@ void Menu()
 int EnterTheNumber(unsigned int number)
 {
     scanf("%d", &number);
-    while(number > 7)
+    while (number > 7)
     {
         printf("Sorry, there is no function with this number, please re-enter\n");
         printf("Enter the number of the function: ");
