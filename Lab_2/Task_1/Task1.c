@@ -1,24 +1,22 @@
+// Copyright 2021 Mary Zyryanova.
 #include <stdio.h>
 #include <stdlib.h>
 #include "Task1.h"
 
-int main(void)
-{
+int main(void) {
     unsigned int number, year, select;
     float cost, value, distance;
-    while (1)
-    {
+    while (1) {
         Menu();
         printf("Enter the number of the function: ");
-        switch (EnterTheNumber(number))
-        {
-            case 1: 
+        switch (EnterTheNumber(number)) {
+            case 1:
                 clrscr();
                 printf("The cost of the car (€): ");
                 scanf("%f", &cost);
                 clrscr();
                 break;
-            case 2: 
+            case 2:
                 clrscr();
                 printf("The year of the car: ");
                 scanf("%d", &year);
@@ -52,20 +50,17 @@ int main(void)
     }
 }
 
-void clrscr()
-{
+void clrscr() {
     system("@cls || clear");
 }
 
-void presentData(float distance, unsigned int year, float value,float cost )
-{
+void presentData(float distance, unsigned int year, float value, float cost ) {
     printf("The cost of the distillation of the car: %f", CostOfTheDistillation(distance));
     printf("\nThe cost of the customs of the car: %f", CostOfTheCustoms(year, value));
     printf("\nThe total cost of the car (in byn): %f\n", TotalCostInByn(cost, distance, year, value));
 }
 
-void Menu()
-{
+void Menu() {
     printf("1. Enter the cost of the car\n");
     printf("2. Enter the year of issue of the car\n");
     printf("3. Enter the engine volume of the car\n");
@@ -75,65 +70,51 @@ void Menu()
     printf("7. Exit the program\n");
 }
 
-int EnterTheNumber(unsigned int number)
-{
+int EnterTheNumber(unsigned int number) {
     scanf("%d", &number);
-    while (number > 7)
-    {
+    while (number > 7) {
         printf("Sorry, there is no function with this number, please re-enter\n");
         printf("Enter the number of the function: ");
-        scanf("%d", &number); 
+        scanf("%d", &number);
     }
     return number;
 }
 
-float CostOfTheDistillation(float distance)
-{
+float CostOfTheDistillation(float distance) {
     float distillation = 0.5 * distance;
     return distillation;
 }
 
-float CostOfTheCustoms(unsigned int year, float value)
-{
+float CostOfTheCustoms(unsigned int year, float value) {
     float customs;
-    if(year < 3)
-    {
+    if (year < 3) {
         customs = 0.6 * value;
     }
-    if (year >= 3 && year < 10)
-    {
-        if (value > 2500)
-        {
+    if (year >= 3 && year < 10) {
+        if (value > 2500) {
             customs = 0.3 * value;
-        }
-        else
-        {
-            customs = 0.6 * value;    
+        } else {
+            customs = 0.6 * value;
         }
     }
-    if (year > 10 && year < 14)
-    {
+    if (year > 10 && year < 14) {
         customs = 0.6 * value;
     }
-    if (year >= 14)
-    {
+    if (year >= 14) {
         customs = 2.0 * value;
     }
     return customs;
 }
 
-float TotalCostInByn(float cost, float distance, unsigned int year, float value)
-{
+float TotalCostInByn(float cost, float distance, unsigned int year, float value) {
     float total = (cost + CostOfTheDistillation(distance) + CostOfTheCustoms(year, value)) * 3.11;
-    return total; 
+    return total;
 }
 
-void Information() 
-{
+void Information()  {
     printf("The author: Mary Zyryanova\nThe version of the program: C98\n");
 }
 
-void Exit()
-{
+void Exit() {
     exit(0);
 }
