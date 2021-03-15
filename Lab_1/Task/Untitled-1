@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+void Composition(int a, float b)
+{
+    float pointer = 1;
+    float count = 0;
+    for (int i = 1; i <= a; i++)
+    {
+        for (int k = 0; k <= i; k++)
+        {
+            count += (b + k);
+        }
+        pointer /= count;
+    }
+    printf("p = %f", pointer);
+}
+
+
+int main()
+{
+    int n;
+    float f;
+    printf("n = ");
+    scanf("%d", &n);
+    printf("f = ");
+    scanf("%f", &f);
+    Composition(n, f);
+}

@@ -1,0 +1,1 @@
+void CountComposition(unsigned int a, double b);
