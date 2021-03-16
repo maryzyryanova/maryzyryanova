@@ -1,10 +1,10 @@
 // Copyright 2021 Mary Zyryanova.
 #include <stdio.h>
 #include <math.h>
-#incliude "function.h"
+#include "function.h"
 
-void Function(int n, double f) {
-    printf("n = ");
+double Function(int n, double f) {
+    printf("/nn = ");
     scanf("%d", &n);
     printf("f = ");
     scanf("%lf", &f);
@@ -16,5 +16,5 @@ void Function(int n, double f) {
         }
         answer *= 1. / current;
     }
-    printf("p = %g", answer);
+    return answer;
 }
