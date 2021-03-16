@@ -1,8 +1,11 @@
 task.o: task.c
 	gcc -c task.c
 
-hello: task.o
-	gcc -o hello task.o
+function.o: mylib/function.c
+	gcc -c mylib/function.c
+
+hello: task.o mylib/function.o
+	gcc -o hello task.o mylib/function.c
 	rm -rf *.o
 
 all: hello

@@ -4,7 +4,7 @@
 #include "function.h"
 
 double Function(int n, double f) {
-    printf("/nn = ");
+    printf("\nn = ");
     scanf("%d", &n);
     printf("f = ");
     scanf("%lf", &f);
