@@ -15,7 +15,7 @@ jobs:
     steps:
     
       - name: clone repo
-        uses: actions/checkout@1
+        uses: actions/checkout@v1
 
       - name: install valgrind and cpplint
         run: |
