@@ -1,8 +1,7 @@
 all: hello
 
 hello: task.o
-	mkdir result
-	gcc -o result/hello task.o
+	gcc -o hello task.o
 	rm -rf *.o
 
 task.o: task.c
