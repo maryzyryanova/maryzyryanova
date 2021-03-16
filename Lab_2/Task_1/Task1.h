@@ -2,6 +2,7 @@
 #ifndef LAB_2_TASK_1_TASK1_H_
 #define LAB_2_TASK_1_TASK1_H_
 #endif  // LAB_2_TASK_1_TASK1_H_
+
 void clrscr();
 void Menu();
 int EnterTheNumber(unsigned int number);
