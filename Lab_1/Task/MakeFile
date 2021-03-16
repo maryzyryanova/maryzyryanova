@@ -1,6 +1,8 @@
 task.o: task.c
 	gcc -c task.c
 
+
+
 hello: task.o
 	gcc -o hello task.o
 	rm -rf *.o
