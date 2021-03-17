@@ -13,18 +13,17 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-       
-      - name: clone repo
-        uses: actions/checkout@v1
-
+    
+      - uses: actions/checkout@v1
       - name: install valgrind and cpplint
+      
         run: |
           sudo apt install valgrind
           sudo pip install cpplint
-      - name: build and test
+      - name: compiling and test
         run: |
           for d in */*/ ; do
           cd "$d"
-          MakeFile
+          make
           cd ..
           done
