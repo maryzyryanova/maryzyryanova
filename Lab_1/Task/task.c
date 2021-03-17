@@ -7,7 +7,12 @@ int main(void) {
     double f;
     char a = 'y';
     while (a != 'n') {
-        printf("p = %f", Function(n, f));
+        printf("\nn = ");
+        scanf("%d", &n);
+        printf("f = ");
+        scanf("%lf", &f);
+        double answer = function(n, f);
+        printf("p = %.100lf", answer);
         printf("\nDo you want to continue?\nAnswer: ");
         scanf("%s", &a);
     }

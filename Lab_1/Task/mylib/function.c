@@ -3,11 +3,7 @@
 #include <math.h>
 #include "function.h"
 
-double Function(int n, double f) {
-    printf("\nn = ");
-    scanf("%d", &n);
-    printf("f = ");
-    scanf("%lf", &f);
+double function(int n, double f) {
     double answer = 1.0;
     for (int i = 1; i <= n; i++) {
         double current = 0;
