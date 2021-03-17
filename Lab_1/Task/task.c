@@ -18,7 +18,7 @@ int main(void) {
         printf("f = ");
         scanf("%lf", &f);
         double answer = function(n, f);
-        printf("p = %10.20e", answer);
+        printf("p = %10.100e", answer);
         printf("\nDo you want to continue?\nAnswer: ");
         scanf("%s", &a);
     }
