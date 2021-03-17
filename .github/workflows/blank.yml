@@ -24,4 +24,8 @@ jobs:
         working-directory: ./Lab_1
         
         run: |
+          for d in */ ; do
+          cd "$d"
           make
+          cd ..
+          done
