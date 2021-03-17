@@ -26,8 +26,6 @@ jobs:
           cd "$d"
           for dd in */ ; do
           cd "$dd"
-          make
+          make -C Lab_1/Task/
           cd ..
-          done
-          cd .. 
           done
