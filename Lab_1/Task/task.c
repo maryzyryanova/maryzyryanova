@@ -10,9 +10,9 @@ int main(void) {
         printf("\nn = ");
         scanf("%d", &n);
         printf("f = ");
-        scanf("%lf", &f);
+        scanf("%f", &f);
         double answer = function(n, f);
-        printf("p = %.100lf", answer);
+        printf("p = %.100f", answer);
         printf("\nDo you want to continue?\nAnswer: ");
         scanf("%s", &a);
     }
