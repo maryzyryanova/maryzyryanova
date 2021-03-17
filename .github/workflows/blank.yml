@@ -22,8 +22,12 @@ jobs:
           sudo pip install cpplint
       - name: compiling and test
         run: |
-          for d in */*/ ; do
+          for d in */ ; do
           cd "$d"
+          for dd in */ ; do
+          cd "$dd"
           make
           cd ..
+          done
+          cd .. 
           done
