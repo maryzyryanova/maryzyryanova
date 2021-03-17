@@ -8,7 +8,7 @@ on:
 
 jobs:
 
-  build-Lab_1-Task:
+  build-Lab_1:
   
     runs-on: ubuntu-latest
 
@@ -22,4 +22,4 @@ jobs:
           sudo pip install cpplint
       - name: compiling and test
         run: |
-          make -C Lab_1/Task/MakeFile
+          make -C Lab_1/
