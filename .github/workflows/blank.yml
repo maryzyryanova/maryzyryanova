@@ -8,7 +8,7 @@ on:
 
 jobs:
 
-  build-Lab_1:
+  build:
   
     runs-on: ubuntu-latest
 
@@ -21,10 +21,9 @@ jobs:
           sudo apt install valgrind
           sudo pip install cpplint
       - name: compiling and test
-        working-directory: ./Lab_1
         
         run: |
-          for d in */ ; do
+          for d in maryzyryanova/maryzyryanova/Lab_1/ ; do
           cd "$d"
           make
           cd ..
