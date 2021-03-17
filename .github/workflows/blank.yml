@@ -23,7 +23,7 @@ jobs:
           sudo pip install cpplint
       - name: build and test
         run: |
-          for d in */ ; do
+          for d in */*/ ; do
           cd "$d"
           make
           cd ..
