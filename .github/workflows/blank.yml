@@ -24,4 +24,4 @@ jobs:
         working-directory: ./Lab_1
         
         run: |
-          make MakeFile all
+          make
