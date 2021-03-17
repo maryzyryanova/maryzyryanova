@@ -8,6 +8,6 @@ double test_function() {
 }
 
 #undef main
-int main(){
+int main() {
     test_function();
 }

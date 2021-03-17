@@ -1,11 +1,14 @@
-task.o: task.c
-	gcc -c task.c
+all: clean buildMain buildTest runTest
 
-function.o: mylib/function.c
-	gcc -c mylib/function.c
+buildMain: task.c
+	gcc -o task task.c -std=c89 -lm
 
-hello: task.o mylib/function.o
-	gcc -o hello task.o mylib/function.c
-	rm -rf *.o
+buildTest: task_test.c
+	gcc -o task_test -Dtask=_task task.c task_test.c -std=c89 -lm
 
-all: hello
+runTest:
+	./task_test
+
+clean:
+	rm -rf clabs
+	
