@@ -2,22 +2,22 @@ name: C/C++ CI
 
 on:
   push:
-    branches: [ master ]
+    branches: [ main ]
   pull_request:
-    branches: [ master ]
+    branches: [ main ]
 
 jobs:
 
-  build Lab_1:
+  build-Lab_1:
   
     runs-on: ubuntu-latest
 
     steps:
     
       - name: clone repo
-        uses: actions/checkoutv@1
+        uses: actions/checkout@v1
 
       - name: install valgrind and cpplint
         run: |
-          sudo apt install -f valgrind
+          sudo apt install valgrind
           sudo pip install cpplint
