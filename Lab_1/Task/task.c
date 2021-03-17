@@ -1,6 +1,6 @@
 // Copyright 2021 Mary Zyryanova.
 #include <stdio.h>
-#include "mylib/function.h"
+#include "function.h"
 
 int main(void) {
     int n;
@@ -10,9 +10,9 @@ int main(void) {
         printf("\nn = ");
         scanf("%d", &n);
         printf("f = ");
-        scanf("%f", &f);
+        scanf("%lf", &f);
         double answer = function(n, f);
-        printf("p = %.100f", answer);
+        printf("p = %.10lf", answer);
         printf("\nDo you want to continue?\nAnswer: ");
         scanf("%s", &a);
     }
