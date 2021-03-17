@@ -8,7 +8,7 @@ on:
 
 jobs:
 
-  build-Lab_1-Task:
+  build-Lab_1/Task:
   
     runs-on: ubuntu-latest
 
