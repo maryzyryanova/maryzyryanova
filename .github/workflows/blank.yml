@@ -13,9 +13,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    
-      - name: clone repo
-        uses: actions/checkout@v1
 
       - name: install valgrind and cpplint
         run: |
@@ -25,6 +22,6 @@ jobs:
         run: |
           for d in */ ; do
           cd "$d"
-          make
+          make MakeFile
           cd ..
           done
