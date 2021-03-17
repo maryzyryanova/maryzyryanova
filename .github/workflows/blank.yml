@@ -23,7 +23,7 @@ jobs:
       - name: compiling and test
         
         run: |
-          for d in maryzyryanova/maryzyryanova/Lab_1/ ; do
+          for d in Lab_1/ ; do
           cd "$d"
           make
           cd ..
