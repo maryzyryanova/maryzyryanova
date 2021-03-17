@@ -25,6 +25,6 @@ jobs:
         run: |
           for d in */ ; do
           cd "$d"
-          make MakeFile
+          make
           cd ..
           done
