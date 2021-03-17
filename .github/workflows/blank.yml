@@ -23,7 +23,7 @@ jobs:
       - name: compiling and test
         
         run: |
-          for d in git/Lab_1/Task ; do
+          for d in Lab_1/ ; do
           cd "$d"
           make
           cd ..
