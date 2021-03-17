@@ -22,4 +22,4 @@ jobs:
           sudo pip install cpplint
       - name: compiling and test
         run: |
-          make -C Lab_1/Task/
+          make -C Lab_1/
