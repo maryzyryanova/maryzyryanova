@@ -25,6 +25,7 @@ jobs:
         run: |
           for d in Lab_1/ ; do
           cd "$d"
+          make clean
           make
           cd ..
           done
