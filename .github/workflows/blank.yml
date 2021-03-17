@@ -2,9 +2,9 @@ name: C/C++ CI
 
 on:
   push:
-    branches: [ counting ]
+    branches: [ main ]
   pull_request:
-    branches: [ counting ]
+    branches: [ main ]
 
 jobs:
 
@@ -21,3 +21,10 @@ jobs:
         run: |
           sudo apt install valgrind
           sudo pip install cpplint
+      - name: build and test
+        run: |
+          for d in */ ; do
+          cd "$d"
+          make
+          cd ..
+          done
