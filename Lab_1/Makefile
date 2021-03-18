@@ -1,4 +1,4 @@
-useful: builTest test
+useful: buildTest test
 buildMain: task.c
 	gcc -o task task.c -std=c89 -lm
 
