@@ -1,4 +1,4 @@
-all: clean buildMain buildTest runTest
+all: clean buildMain buildTest runTest valgrind_check 
 
 buildMain: task.c
 	gcc -o task task.c -std=c89 -lm
@@ -8,7 +8,12 @@ buildTest: task_test.c
 
 runTest:
 	./task_test
+	
+valgrind_check:
+	mkdir -p bin/temp
+	echo "2, 2" > bin/temp/input.txt
+	valgrind ./bin/program/main < bin/temp/input.txt
 
 clean:
-	rm -rf* .exe
+	rm -rf Lab_1/
 	
