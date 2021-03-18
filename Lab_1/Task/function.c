@@ -7,7 +7,7 @@ double function(int n, double f) {
     int i;
     for (i = 1; i <= n; i++) {
         double current = 0.;
-        nt k
+        int k;
         for (k = 0; k <= i; k++) {
             current += f + k;
         }
