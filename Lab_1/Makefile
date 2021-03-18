@@ -7,6 +7,9 @@ buildTest: task_test.c
 
 test:
 	./task_test
+valgrind_check:
+	echo "20\n2.2032" > input.txt
+	valgrind ./main < input.txt
 
 .PHONY: clean
 clean:
