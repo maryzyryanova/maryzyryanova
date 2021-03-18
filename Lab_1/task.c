@@ -20,6 +20,7 @@ int main(void) {
         printf("p = %.20e", answer);
         printf("\nDo you want to continue?\nAnswer: ");
         scanf("%s", &a);
+        return 0;
     }
 }
    
