@@ -5,7 +5,7 @@ buildMain: task.c
 buildTest: task_test.c
 	gcc -o task_test -Dmain=_main task.c task_test.c -std=c89 -pedantic -lm
 
--
+.PHONY: clean
 clean:
 	rm -rf Lab_1/
 	
