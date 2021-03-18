@@ -1,4 +1,3 @@
-// Copyright 2021 Mary Zyryanova.
 #include <stdio.h>
 #include <math.h>
 #include "function.h"
