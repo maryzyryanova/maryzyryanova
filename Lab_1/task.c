@@ -3,7 +3,7 @@
 
 int main(void) {
     int n;
-    double f;
+    double f, answer;
     char a = 'y';
     while (a != 'n') {
         printf("\nn = ");
@@ -16,7 +16,7 @@ int main(void) {
         }
         printf("f = ");
         scanf("%lf", &f);
-        double answer = function(n, f);
+        answer = function(n, f);
         printf("p = %.20e", answer);
         printf("\nDo you want to continue?\nAnswer: ");
         scanf("%s", &a);
