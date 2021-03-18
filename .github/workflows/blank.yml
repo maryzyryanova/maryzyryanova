@@ -23,4 +23,4 @@ jobs:
       - name: compiling and test
         
         run: |
-          make -C Lab_1/
+           cmake -C Lab_1/
