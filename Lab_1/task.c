@@ -16,7 +16,7 @@ int main(void) {
         
         printf("f = ");
         while (scanf("%lf", &f) != 1.) {
-            if (scanf("%lf", &f)) {
+            if (scanf("%lf", &f) != 1) {
             printf("\nIncorrect input, try again!");  
             printf("\nf = ");
             while(getchar() != '\n') {}
