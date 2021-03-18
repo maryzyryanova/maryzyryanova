@@ -11,6 +11,9 @@ valgrind_check:
 	echo "20\n2.2032" > input.txt
 	valgrind ./main < input.txt
 
+linter_check:
+	cpplint *.c
+
 .PHONY: clean
 clean:
 	rm -rf Lab_1/
