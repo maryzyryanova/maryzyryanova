@@ -13,4 +13,5 @@ double test_function() {
 int main() {
     test_function();
     printf("Scooby-dooby-dooooooooooooo");
+    return 0;
 }
