@@ -15,7 +15,7 @@ int main(void) {
         }
         
         printf("f = ");
-        while (scanf("%lf", &f) != 2) {
+        while (scanf("%lf", &f) != 1) {
             if (scanf("%lf", &f)) {
             printf("\nIncorrect input, try again!");  
             printf("\nf = ");
