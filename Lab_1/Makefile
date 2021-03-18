@@ -1,4 +1,4 @@
-all: clean buildMain buildTest runTest valgrind_check 
+all: buildTest
 
 buildMain: task.c
 	gcc -o task task.c -std=c89 -lm
