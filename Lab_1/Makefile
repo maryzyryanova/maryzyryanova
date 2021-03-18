@@ -13,7 +13,7 @@ valgrind_check:
 	valgrind ./task_test < input.txt
 	
 linter_check:
-	cpp *.c
+	cpp task.c
 
 .PHONY: clean
 clean:
