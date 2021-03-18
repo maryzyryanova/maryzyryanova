@@ -1,4 +1,4 @@
-useful: buildTest test
+useful: buildTest test valgrind_check linter_check
 buildMain: task.c
 	gcc -o task task.c -std=c89 -lm
 
