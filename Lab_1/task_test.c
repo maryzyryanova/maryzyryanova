@@ -1,6 +1,5 @@
 #include "function.h"
 #include <assert.h>
-#include <float.h>
 #include <stdio.h>
 
 double test_function() {
