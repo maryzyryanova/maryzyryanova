@@ -1,4 +1,4 @@
-useful: buildTest test valgrind_check
+useful: buildTest test valgrind_check linter_check
 buildMain: task.c
 	gcc -o task task.c -std=c89 -lm
 
@@ -11,6 +11,9 @@ test:
 valgrind_check:
 	echo "20\n2.2032" > input.txt
 	valgrind ./task_test < input.txt
+	
+linter_check:
+	cpp *.c
 
 .PHONY: clean
 clean:
