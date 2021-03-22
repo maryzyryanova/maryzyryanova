@@ -1,7 +1,6 @@
 #include <assert.h>
 #include "functions.c"
 #include <float.h>
-#include <stdio.h>
 
 float Test_1() {
     assert(CostOfTheDistillation(2453.2) - 1226.6 < 0.0000001);
