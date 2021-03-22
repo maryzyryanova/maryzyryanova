@@ -14,4 +14,6 @@ valgrind_check:
 	
 linter_check:
 	cpp Task1.c
+	
+
 
