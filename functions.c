@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include "function.h"
 
 void clrscr()
 {
