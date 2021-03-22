@@ -9,7 +9,7 @@ float Test_1() {
 }
 
 float Test_2() {
-    assert(CostOfTheCustoms(2, 5500) - 3300 < DBL_EPSILON;
+    assert(CostOfTheCustoms(2, 5500) - 3300 < DBL_EPSILON);
     assert(CostOfTheCustoms(5, 2000) - 1200 < DBL_EPSILON);
     assert(CostOfTheCustoms(7, 3000) - 900 < DBL_EPSILON);
     assert(CostOfTheCustoms(10, 3200) - 1920 < DBL_EPSILON);
