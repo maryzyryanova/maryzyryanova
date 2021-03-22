@@ -15,6 +15,3 @@ valgrind_check:
 linter_check:
 	cpp Task1.c
 
-.PHONY: clean
-clean:
-	rm -rf Lab2_Task1/
