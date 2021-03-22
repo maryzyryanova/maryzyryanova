@@ -21,7 +21,7 @@ int main()
             case 2: 
                 clrscr();
                 printf("The year of the car: ");
-                scanf("%d", &year);
+                scanf("%u", &year);
                 clrscr();
                 break;
             case 3:
