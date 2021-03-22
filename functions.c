@@ -26,12 +26,12 @@ void Menu()
 
 int EnterTheNumber(unsigned int number)
 {
-    scanf("%d", &number);
+    scanf("%u", &number);
     while(number > 7)
     {
         printf("Sorry, there is no function with this number, please re-enter\n");
         printf("Enter the number of the function: ");
-        scanf("%d", &number); 
+        scanf("%u", &number); 
     }
     return number;
 }
