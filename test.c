@@ -1,5 +1,5 @@
 #include <assert.h>
-#include "functions.c"
+#include "functions.h"
 #include <float.h>
 
 float Test_1() {
