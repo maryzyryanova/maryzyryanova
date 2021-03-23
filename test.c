@@ -5,7 +5,7 @@
 
 #undef main
 int main() {
-  printf("fabs(CountRightRec(2, 0.523333) - 0.475557) < 0.1");
+  printf("\n\n%f\n\n", CountRightRec(2, 0.523333));
   assert(fabs(CountRightRec(2, 0.523333) - 0.475557) < 0.1);
   printf("fabs(CountRightIter(3, 1.046667) - 0.748198) < 0.1");
   assert(fabs(CountRightIter(3, 1.046667) - 0.748198) < 0.1);
