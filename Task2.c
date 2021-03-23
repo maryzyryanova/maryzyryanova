@@ -4,7 +4,7 @@
 
 int main()
 {
-    int64_t n;
+    uint64_t n;
     int choice, x;
     float angle, right, left;
     char answer = 'y';
