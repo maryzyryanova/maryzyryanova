@@ -38,19 +38,20 @@ int main()
                 while(getchar() != '\n') {}
             }
         }
+        angle = x * 3.14 / 180;
         left = sin(angle);
         switch (choice)
         {
             case 1:
             {
-                right = CountRightRec(n, x);
+                right = CountRightRec(n, angle);
                 printf("The result in the left: %f\n", left);
                 printf("The result in the right %f\n", right);
                 break;
             }
             case 2:
             {
-                right = CountRightIter(n, x);
+                right = CountRightIter(n, angle);
                 printf("The result in the left: %f\n", left);
                 printf("The result in the right %f\n", right);
                 break;
