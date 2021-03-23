@@ -4,9 +4,9 @@
 #include <stdio.h>
 
 float Test_1() {
-    assert(CostOfTheDistillation(2453.2) - 1226.6 < 0.00001);
-    assert(CostOfTheDistillation(763671) - 381835.5 < 0.00001);
-    assert(CostOfTheDistillation(4500) - 2250 < 0.00001);
+    assert(CostOfTheDistillation(2453.2) == 1226.60);
+    assert(CostOfTheDistillation(763671) == 381835.50);
+    assert(CostOfTheDistillation(4500) == 2250.00 );
 }
 
 float Test_2() {
