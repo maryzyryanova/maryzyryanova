@@ -7,6 +7,6 @@
 int main() {
   assert(fabs(CostOfTheDistillation(10) - 15.55) < 0.01);
   assert(fabs(CostOfTheCustoms(2, 3300) - 6157.80) < 0.01);
-  assert(fabs(TotalCostInByn(10000, 10, 2, 3300) - 31119.28) < 0.01);
+  assert(fabs(TotalCostInByn(10000, 10, 2, 3300) - 37273.35) < 0.01);
   return 0;
 }
