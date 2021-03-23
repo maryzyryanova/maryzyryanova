@@ -2,7 +2,7 @@
 #include <math.h>
 #include "functions.h"
 
-int64_t CountFactorialRec(unsigned int n)
+unsigned int CountFactorialRec(unsigned int n)
 {
     if(n == 1 ||n == 0)
     {
@@ -14,7 +14,7 @@ int64_t CountFactorialRec(unsigned int n)
     }
 }
 
-int64_t CountFactorialIter(unsigned int n) 
+unsigned int CountFactorialIter(unsigned int n) 
 {
     if (n == 1 || n == 0)
     {
