@@ -2,7 +2,7 @@
 
 int main()
 {
-    uint_64t n;
+    uint64_t n;
     int choice, x;
     float right, left, angle;
     char answer = 'y';
