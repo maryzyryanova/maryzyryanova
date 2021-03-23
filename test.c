@@ -4,13 +4,13 @@
 #include <stdio.h>
 #include <math.h>
 
-float Test_1() {
+int Test_1() {
     assert(CostOfTheDistillation(2453.2) - 3814.73 < 0.01);
     assert(CostOfTheDistillation(7636) - 11873.98 < 0.01);
     assert(CostOfTheDistillation(4500) - 6997.50 < 0.01);
 }
 
-float Test_2() {
+int Test_2() {
     assert(CostOfTheCustoms(2, 5500) - 10263 < 0.01);
     assert(CostOfTheCustoms(5, 2000) - 3732 < 0.01);
     assert(CostOfTheCustoms(7, 3000) - 2799 < 0.01);
@@ -18,7 +18,7 @@ float Test_2() {
     assert(CostOfTheCustoms(14, 1600) - 9952 < 0.01);
 }
 
-float Test_3() {
+int Test_3() {
     assert(TotalCostInByn(2000, 2453.2, 2, 5500 - 20297.73) < 0.01);
     assert(TotalCostInByn(3000, 7636, 7, 3000 - 24002.98) < 0.01);
     assert(TotalCostInByn(7000, 4500, 14, 1600 - 38719.50) < 0.01);
