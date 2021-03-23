@@ -1,5 +1,5 @@
 #include <assert.h>
-#include "Task2.c"
+#include "functions.c"
 
 #undef main
 int main()
