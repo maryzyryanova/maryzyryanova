@@ -38,7 +38,7 @@ unsigned int EnterTheNumber(unsigned int number)
     return number;
 }
 
-double CostOfTheDistillation(float distance)
+double CostOfTheDistillation(double distance)
 {
     double distillation = 3.11 * 0.5 * distance;
     double result = roundf(distillation * 10000) / 10000;
