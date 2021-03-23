@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdint.h>
 
 int64_t CountFactorialRec(int64_t n);
 int64_t CountFactorialIter(int64_t n) ;
