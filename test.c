@@ -18,9 +18,9 @@ float Test_2() {
 }
 
 float Test_3() {
-    assert(TotalCostInByn(2000, 2453.2, 2, 5500) - 20297.73 < 0.01);
-    assert(TotalCostInByn(3000, 7636, 7, 3000) - 24002.98 < 0.01);
-    assert(TotalCostInByn(7000, 4500, 14, 1600) - 38719.50 < 0.01);
+    assert(TotalCostInByn(2000, 2453.2, 2, 5500) == 20297.73);
+    assert(TotalCostInByn(3000, 7636, 7, 3000) == 24002.98);
+    assert(TotalCostInByn(7000, 4500, 14, 1600) == 38719.50);
 }
 
 #undef main
