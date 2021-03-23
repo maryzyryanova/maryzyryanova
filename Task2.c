@@ -4,16 +4,16 @@
 
 int main()
 {
-    unsigned long int n;
+    int64_t n;
     int choice, x;
     float angle, right, left;
     char answer = 'y';
     while (answer == 'y')
     {
         printf("Enter n: ");
-        while (scanf("%ld", &n) != 1) 
+        while (scanf("%lu", &n) != 1) 
         {
-            if (scanf("%ld", &n) != 1) 
+            if (scanf("%lu", &n) != 1) 
             {
                 printf("Incorrect input, try again!");  
                 printf("\nn = ");
@@ -26,7 +26,7 @@ int main()
             if (scanf("%d", &x) != 1) 
             {
                 printf("Incorrect input, try again!");  
-                printf("\nn = ");
+                printf("\nx = ");
                 while(getchar() != '\n') {}
             }
         }
@@ -36,7 +36,7 @@ int main()
             if (scanf("%d", &choice) != 1) 
             {
                 printf("Incorrect input, try again!");  
-                printf("\nn = ");
+                printf("\nyour choice = ");
                 while(getchar() != '\n') {}
             }
         }
