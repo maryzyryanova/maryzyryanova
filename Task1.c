@@ -19,6 +19,7 @@ int main()
                     printf("Incorrect input, try again!");  
                     printf("\nn = ");
                     while(getchar() != '\n') {}
+                    }
                 }
                 clrscr();
                 break;
@@ -32,6 +33,7 @@ int main()
                     printf("Incorrect input, try again!");  
                     printf("\nn = ");
                     while(getchar() != '\n') {}
+                    }
                 }
                 clrscr();
                 break;
@@ -45,6 +47,7 @@ int main()
                     printf("Incorrect input, try again!");  
                     printf("\nn = ");
                     while(getchar() != '\n') {}
+                    }
                 }
                 clrscr();
                 break;
@@ -58,6 +61,7 @@ int main()
                     printf("Incorrect input, try again!");  
                     printf("\nn = ");
                     while(getchar() != '\n') {}
+                    }
                 }
                 clrscr();
                 break;
@@ -76,4 +80,3 @@ int main()
         }
     }
 }
-
