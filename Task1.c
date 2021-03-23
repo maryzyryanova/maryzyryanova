@@ -36,7 +36,7 @@ int main()
                 break;
             case 5:
             clrscr();
-                presentData(distance,year,value,cost);
+                PresentData(distance, year, value, cost);
                 break;
             case 6:
                 clrscr();
