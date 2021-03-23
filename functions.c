@@ -22,8 +22,8 @@ int64_t CountFactorialIter(int64_t n)
     }
     else
     {
-        int result = 1;
-        for (int i = 1; i <= n; i++)
+        int i, result = 1;
+        for (i = 1; i <= n; i++)
         {
             result *= (2*i - 1);
         }
@@ -53,8 +53,8 @@ float CountRightIter(int64_t n, float angle)
     }
     else
     {
-        float right = 0.;
-        for (int i = 1.; i <= n; i++)
+        float i, right = 0.;
+        for (i = 1.; i <= n; i++)
         {
             right += pow(-1, (i - 1)) * powf(angle, ((2 * i) - 1)) / CountFactorialIter(i);
         }
