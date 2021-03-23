@@ -5,8 +5,8 @@
 #include <math.h>
 
 float Test_1() {
-    assert(llabs(CostOfTheDistillation(2453.2) - 3814.73) < 1);
-    assert(llabs(CostOfTheDistillation(7636) - 11873.98) < 1);
+    assert(CostOfTheDistillation(2453.2) - 3814.73 < 1);
+    assert(CostOfTheDistillation(7636) - 11873.98 < 1);
 }
 
 float Test_2() {
