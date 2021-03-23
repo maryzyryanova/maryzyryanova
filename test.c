@@ -1,6 +1,8 @@
 #include <assert.h>
-#include "functions.h"
 #include <math.h>
+#include <stdio.h>
+#include "functions.h"
+
 
 #undef main
 int main() {
