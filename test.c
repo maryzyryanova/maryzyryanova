@@ -18,7 +18,7 @@ float Test_2() {
 }
 
 float Test_3() {
-    assert(TotalCostInByn(2000, 2453.2, 2, 5500) - 20297.726562 < DBL_EPSILON);
+    assert(TotalCostInByn(2000, 2453.2, 2, 5500) - 20297.726562 < 0.000001);
     assert(TotalCostInByn(3000, 7636, 7, 3000) - 24002.980469 < DBL_EPSILON);
     assert(TotalCostInByn(7000, 4500, 14, 1600) - 38719.500000 < DBL_EPSILON);
 }
