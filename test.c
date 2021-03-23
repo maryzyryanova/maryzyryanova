@@ -5,8 +5,8 @@
 
 #undef main
 int main() {
-  assert(fabs(CountRightRec(2, 30 * 3.14 / 180) - 0.48) < 0.01);
-  assert(fabs(CountRightIter(3, 60 * 3.14 / 180) - 0.75) < 0.01);
+  assert(fabs(CountRightRec(2, 30 * 3.14 / 180) - 0.475557) < 0.000001);
+  assert(fabs(CountRightIter(3, 60 * 3.14 / 180) - 0.748198) < 0.000001);
   printf("Scooooooooooby-Doooooooby-Doooooo");
   return 0;
 }
