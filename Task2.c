@@ -41,7 +41,7 @@ int main()
                 while(getchar() != '\n') {}
             }
         }
-        angle = x * M_PI / 180;
+        angle = (x * M_PI) / 180;
         left = sin(angle);
         switch (choice)
         {
