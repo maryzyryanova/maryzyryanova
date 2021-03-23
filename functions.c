@@ -8,7 +8,7 @@ void clrscr()
     system("@cls || clear");
 }
 
-void presentData(float distance, unsigned int year, float value, float cost)
+void PresentData(float distance, unsigned int year, float value, float cost)
 {
     printf("The cost of the distillation of the car: %.2f", CostOfTheDistillation(distance));
     printf("\nThe cost of the customs of the car: %.2f", CostOfTheCustoms(year, value));
