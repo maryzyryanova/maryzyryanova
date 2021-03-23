@@ -27,8 +27,8 @@ float Test_3() {
 int main() {
     double test = 0.01;
     printf("%f\n", CostOfTheDistillation(20) - 31.10);
-    assert(CostOfTheDistillation(20) - 31.10 < eps);
-    assert(CostOfTheCustoms(2, 5500)) - 10263 < eps);
-    assert(TotalCostInByn(2000, 2453.2, 2, 5500) - 20297.73 < eps);
+    assert(CostOfTheDistillation(20) - 31.10 < test);
+    assert(CostOfTheCustoms(2, 5500) - 10263 < test);
+    assert(TotalCostInByn(2000, 2453.2, 2, 5500) - 20297.73 < test);
     printf("Great job!!!");
 }
