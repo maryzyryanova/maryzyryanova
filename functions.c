@@ -31,7 +31,7 @@ uint64_t CountFactorialIter(uint64_t n)
     }
 }
 
-float CountRightRec(uint64_t n, int64_t angle)
+float CountRightRec(uint64_t n, unsigned int angle)
 {
     if (n == 0)
     {
@@ -45,7 +45,7 @@ float CountRightRec(uint64_t n, int64_t angle)
     }
 }
 
-float CountRightIter(uint64_t n, int64_t angle) 
+float CountRightIter(uint64_t n, unsigned int angle) 
 {
     if (n == 0)
     {
