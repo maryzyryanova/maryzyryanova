@@ -1,5 +1,4 @@
 #include "functions.c"
-#define M_PI 3.1415926535
 
 int main()
 {
@@ -40,7 +39,7 @@ int main()
                 while(getchar() != '\n') {}
             }
         }
-        angle = (x * M_PI) / 180;
+        angle = x * 3.14 / 180;
         left = sin(angle);
         switch (choice)
         {
