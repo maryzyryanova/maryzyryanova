@@ -7,15 +7,15 @@
 float Test_1() {
     assert(CostOfTheDistillation(2453.2) - 3814.73 < 0.01);
     assert(CostOfTheDistillation(7636) - 11873.98 < 0.01);
-    assert(CostOfTheDistillation(4500) - 6997.5 < 0.01);
+    assert(CostOfTheDistillation(4500) - 6997.5 < 0.1);
 }
 
 float Test_2() {
-    assert(CostOfTheCustoms(2, 5500) - 10263 < 0.01);
-    assert(CostOfTheCustoms(5, 2000) - 3732 < 0.01);
-    assert(CostOfTheCustoms(7, 3000) - 2799 < 0.01);
-    assert(CostOfTheCustoms(10, 3200) - 5971.2 < 0.01);
-    assert(CostOfTheCustoms(14, 1600) - 9952 < 0.01);
+    assert(CostOfTheCustoms(2, 5500) - 10263 < 0);
+    assert(CostOfTheCustoms(5, 2000) - 3732 < 0);
+    assert(CostOfTheCustoms(7, 3000) - 2799 < 0);
+    assert(CostOfTheCustoms(10, 3200) - 5971.2 < 0.1);
+    assert(CostOfTheCustoms(14, 1600) - 9952 < 0);
 }
 
 float Test_3() {
