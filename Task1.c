@@ -3,7 +3,8 @@
 int main()
 {
     unsigned int number, year, select;
-    float cost, value, distance;
+    float cost, value;
+    double distance;
     while(1)
     {
         Menu();
