@@ -1,5 +1,5 @@
 #include <assert.h>
-#include "functions.c"
+#include "functions.h"
 
 #undef main
 int main()
