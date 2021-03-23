@@ -3,7 +3,8 @@
 
 int main()
 {
-    uint64_t n, angle;
+    uint64_t n;
+    unsigned int angle;
     int choice, x;
     float right, left;
     char answer = 'y';
