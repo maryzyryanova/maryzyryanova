@@ -2,8 +2,7 @@
 
 int main()
 {
-    unsigned int number, year;
-    float cost, value,distance;
+    unsigned int number, year, cost, value,distance;
     while(1)
     {
         Menu();
@@ -13,7 +12,7 @@ int main()
             case 1: 
                 clrscr();
                 printf("The cost of the car (€): ");
-                scanf("%f", &cost);
+                scanf("%u", &cost);
                 clrscr();
                 break;
             case 2: 
@@ -25,13 +24,13 @@ int main()
             case 3:
                 clrscr();
                 printf("The engine value of the car (cc):  ");
-                scanf("%f", &value);
+                scanf("%u", &value);
                 clrscr();
                 break;
             case 4:
                 clrscr();
                 printf("The run distance of the car (km): ");
-                scanf("%f", &distance);
+                scanf("%u", &distance);
                 clrscr();
                 break;
             case 5:
