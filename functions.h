@@ -1,8 +1,8 @@
 void clrscr();
-void PresentData(float distance, unsigned int year, float value, float cost);
+void PresentData(unsigned int distance, unsigned int year, unsigned int value, unsigned int cost);
 void Menu();
 unsigned int EnterTheNumber(unsigned int number);
-float CostOfTheDistillation(float distance);
-float CostOfTheCustoms(unsigned int year, float value);
-float TotalCostInByn(float cost, float distance, unsigned int year, float value);
+float CostOfTheDistillation(unsigned int distance);
+float CostOfTheCustoms(unsigned int year, unsigned int value);
+float TotalCostInByn(unsigned int cost, unsigned int distance, unsigned int year, unsigned int value);
 void Information() ;
