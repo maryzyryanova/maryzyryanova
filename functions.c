@@ -26,7 +26,7 @@ void Menu()
     printf("7. Exit the program\n");
 }
 
-int EnterTheNumber(unsigned int number)
+unsigned int EnterTheNumber(unsigned int number)
 {
     scanf("%u", &number);
     while(number > 7)
