@@ -11,8 +11,7 @@ void clrscr()
 float CostOfTheDistillation(unsigned int distance)
 {
     float distillation = 3.11 * 0.5 * distance;
-    float result = roundf(distillation * 10000) / 10000;
-    return result;
+    return distillation;
 }
 
 float CostOfTheCustoms(unsigned int year, unsigned int value)
@@ -41,15 +40,13 @@ float CostOfTheCustoms(unsigned int year, unsigned int value)
     {
         customs = 2.0 * 3.11 * value;
     }
-    result = roundf(customs * 10000) / 10000;
-    return result;
+    return customs;
 }
 
 float TotalCostInByn(unsigned int cost, unsigned int distance, unsigned int year, unsigned int value)
 {
     float total = 3.11 * cost + CostOfTheDistillation(distance) + CostOfTheCustoms(year, value);
-    float result = roundf(total * 10000) / 10000;
-    return result;
+    return total;
 }
 
 void PresentData(unsigned int distance, unsigned int year,  unsigned int value,  unsigned int cost)
