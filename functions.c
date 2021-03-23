@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "functions.h"
+#include "function.h"
 #include <math.h>
 
 void clrscr()
@@ -47,7 +47,7 @@ float CostOfTheDistillation(float distance)
 
 float CostOfTheCustoms(unsigned int year, float value)
 {
-    float customs;
+    float customs, result;
     if(year < 3)
     {
         customs = 0.6 * 3.11 * value;
@@ -71,7 +71,7 @@ float CostOfTheCustoms(unsigned int year, float value)
     {
         customs = 2.0 * 3.11 * value;
     }
-    float result = roundf(customs * 10000) / 10000;
+    result = roundf(customs * 10000) / 10000;
     return result;
 }
 
