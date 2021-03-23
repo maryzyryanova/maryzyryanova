@@ -5,7 +5,7 @@
 #include <math.h>
 
 float Test_1() {
-    assert(fabs(CostOfTheDistillation(2453.2) - 3814.73) < 1);
+    assert(fabs(CostOfTheDistillation(2453.2) - 3814.73) < 0.01);
     assert(fabs(CostOfTheDistillation(7636) - 11873.98) < 1);
 }
 
