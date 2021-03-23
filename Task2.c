@@ -3,9 +3,9 @@
 
 int main()
 {
-    uint64_t n;
+    uint64_t n, angle;
     int choice, x;
-    float angle, right, left;
+    float right, left;
     char answer = 'y';
     while (answer == 'y')
     {
