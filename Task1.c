@@ -12,25 +12,53 @@ int main()
             case 1: 
                 clrscr();
                 printf("The cost of the car (€): ");
-                scanf("%u", &cost);
+                while (scanf("%u", &cost) != 1) 
+                {
+                    if (scanf("%u", &cost) != 1) 
+                    {
+                    printf("Incorrect input, try again!");  
+                    printf("\nn = ");
+                    while(getchar() != '\n') {}
+                }
                 clrscr();
                 break;
             case 2: 
                 clrscr();
                 printf("The year of the car: ");
-                scanf("%u", &year);
+                while (scanf("%u", &year) != 1) 
+                {
+                    if (scanf("%u", &year) != 1) 
+                    {
+                    printf("Incorrect input, try again!");  
+                    printf("\nn = ");
+                    while(getchar() != '\n') {}
+                }
                 clrscr();
                 break;
             case 3:
                 clrscr();
                 printf("The engine value of the car (cc):  ");
-                scanf("%u", &value);
+                while (scanf("%u", &value) != 1) 
+                {
+                    if (scanf("%u", &value) != 1) 
+                    {
+                    printf("Incorrect input, try again!");  
+                    printf("\nn = ");
+                    while(getchar() != '\n') {}
+                }
                 clrscr();
                 break;
             case 4:
                 clrscr();
                 printf("The run distance of the car (km): ");
-                scanf("%u", &distance);
+                while (scanf("%u", &distance) != 1) 
+                {
+                    if (scanf("%u", &distance) != 1) 
+                    {
+                    printf("Incorrect input, try again!");  
+                    printf("\nn = ");
+                    while(getchar() != '\n') {}
+                }
                 clrscr();
                 break;
             case 5:
