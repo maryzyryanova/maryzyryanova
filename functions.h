@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include <stdint.h>
 
 int64_t CountFactorialRec(int64_t n);
