@@ -2,7 +2,7 @@
 
 int main()
 {
-    unsigned int number, year, select;
+    unsigned int number, year;
     float cost, value,distance;
     while(1)
     {
