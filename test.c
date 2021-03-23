@@ -4,17 +4,17 @@
 #include <stdio.h>
 
 float Test_1() {
-    assert(CostOfTheDistillation(2453.2) == 1226.6);
-    assert(CostOfTheDistillation(763671) == 381835.5);
-    assert(CostOfTheDistillation(4500) == 2250.00 );
+    assert(CostOfTheDistillation(2453.2) == 3814.73);
+    assert(CostOfTheDistillation(7636) == 11873.98);
+    assert(CostOfTheDistillation(4500) == 6997.5);
 }
 
 float Test_2() {
-    assert(CostOfTheCustoms(2, 5500) - 3300 < 0.00001);
-    assert(CostOfTheCustoms(5, 2000) - 1200 < 0.00001);
-    assert(CostOfTheCustoms(7, 3000) - 900 < 0.00001);
-    assert(CostOfTheCustoms(10, 3200) - 1920 < 0.00001);
-    assert(CostOfTheCustoms(14, 1600) - 3200 < 0.00001);
+    assert(CostOfTheCustoms(2, 5500) == 10263);
+    assert(CostOfTheCustoms(5, 2000) == 3732);
+    assert(CostOfTheCustoms(7, 3000) == 2799);
+    assert(CostOfTheCustoms(10, 3200) == 5971.2);
+    assert(CostOfTheCustoms(14, 1600) == 9952);
 }
 
 float Test_3() {
