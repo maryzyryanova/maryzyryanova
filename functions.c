@@ -39,8 +39,21 @@ float CountRightRec(unsigned int n, float angle)
     }
     else
     {
-        float result = 0.;
-        result += pow(-1, n - 1) * powf(angle, (2 * n) - 1) / CountFactorialRec(n);
+        float result = 0., ang;
+        int i, a = -1;
+        for (i = 1; i <= n - 1; i++)
+        {
+            a *= -1;
+        }
+        for (i = 1; i < (2 * n) - 1; i++)
+        {
+            int j;
+            for(j = 1; j < i; j++)
+            {
+                ang = angle * angle;   
+            }
+        }
+        result += a * ang / CountFactorialRec(n);
         return (result + CountRightRec(n - 1, angle));
     }
 }
@@ -53,7 +66,7 @@ float CountRightIter(unsigned int n, float angle)
     }
     else
     {
-        float i, right = 0.;
+        float i, j, right = 0.;
         for (i = 1.; i <= n; i++)
         {
             right += pow(-1, (i - 1)) * powf(angle, ((2 * i) - 1)) / CountFactorialIter(i);
