@@ -1,5 +1,5 @@
 #include <stdio.h>
-#define RAND_MAX 1
+#include <stdlib.h>
 
 int main()
 {
