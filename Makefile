@@ -1,9 +1,9 @@
 all: buildTest test valgrind_check linter_check
 buildMain: task.c
-	gcc -o task task.c -std=c89 -lm
+	gcc -o task task.c -std=c99 -lm
 
 buildTest: test.c
-	gcc -o test -Dmain=_main task.c test.c -std=c89 -pedantic -lm
+	gcc -o test -Dmain=_main task.c test.c -std=c99 -pedantic -lm
 
 test:
 	./test
