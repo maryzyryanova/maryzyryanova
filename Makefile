@@ -9,6 +9,7 @@ test:
 	./test
 	
 valgrind_check:
+	echo "" > input.txt
 	valgrind ./test < input.txt
 	
 linter_check:
