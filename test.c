@@ -3,12 +3,16 @@
 #include <stdio.h>
 #include "functions.h"
 
-#define N 3
-#define M 4
+
 void test()
 {
     int *array;
-    array = (int*)malloc(N*M*sizeof(int)); 
+    array = (int*)malloc(3*4*sizeof(int)); 
+    array = {
+            1, 1, 1, 0,
+            0, 0, 0, 0,
+            1, 1, 0, 1
+            };
     assert(Index_Row(&array, M, 0) == -1);
     assert(Index_Column(&array, N, 2) == 2);
     assert(Delete_Rows(N, M, &array) == 3);
