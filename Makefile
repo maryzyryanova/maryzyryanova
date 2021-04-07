@@ -9,7 +9,7 @@ test:
 	./test
 	
 valgrind_check:
-	echo "3\n4" > input.txt
+	echo "3\n4\n" > input.txt
 	valgrind ./test < input.txt
 	
 linter_check:
