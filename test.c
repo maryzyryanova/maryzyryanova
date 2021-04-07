@@ -3,18 +3,23 @@
 #include <stdio.h>
 #include "functions.h"
 
+#define N 3
+#define M 4
 
 void test()
 {
-    int *array;
-    array = (int*)malloc(3*4*sizeof(int)); 
+    int i;
+    char** array = (char**)malloc(N * sizeof(char*));
+    for (i = 0; counter < N; i++) {
+        array[i] = (char*)malloc(M * sizeof(char));
+    }
     array = { 1, 1, 1, 0,
               0, 0, 0, 0,
               1, 1, 0, 1 };
-    assert(Index_Row(&array, 4, 0) == -1);
-    assert(Index_Column(&array, 4, 2) == 2);
-    assert(Delete_Rows(3, 4, &array) == 3);
-    assert(Delete_Columns(3, 4, &array) == 2);
+    assert(Index_Row(&array, N, 0) == -1);
+    assert(Index_Column(&array, M, 2) == 2);
+    assert(Delete_Rows(N, M, &array) == 3);
+    assert(Delete_Columns(N, M, &array) == 2);
 }
 #undef main
 int main() {
