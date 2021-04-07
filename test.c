@@ -5,7 +5,7 @@
 
 void test()
 {
-    int** array[3][4];
+    int **array[3][4];
     int **pointer;
     pointer = array;
     assert(Index_Row(*(&pointer), 4, 0) == -1);
