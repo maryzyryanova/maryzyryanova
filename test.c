@@ -9,9 +9,9 @@
 void test()
 {
     int i;
-    char** array = (char**)malloc(N * sizeof(char*));
+    int** array = (int**)malloc(N * sizeof(int*));
     for (i = 0; i < N; i++) {
-        array[i] = (char*)malloc(M * sizeof(char));
+        array[i] = (int*)malloc(M * sizeof(int));
     }
     assert(Index_Row(array, N, 0) == -1);
     assert(Index_Column(array, M, 2) == 2);
