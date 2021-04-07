@@ -5,7 +5,7 @@
 
 void test()
 {
-    int *array = {(1, 1, 1, 0), (0, 0, 0, 0), (1, 1, 0, 1)};
+    int *array;
     array = (int*)malloc(3*4*sizeof(int)); 
     assert(Index_Row(&array, 4, 0) == -1);
     assert(Index_Column(&array, 3, 2) == 2);
