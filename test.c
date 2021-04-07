@@ -24,7 +24,7 @@ void test()
     assert(test.count_y  == 4);                        
 }
 
-#undef main;
+#undef main
 int main()
 {
     test();
