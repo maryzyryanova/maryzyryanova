@@ -1,11 +1,11 @@
 
-name: C Lab
+name: C Lab4
 
 on:
   push:
-    branches: [ Lab_3 ]
+    branches: [ Lab4_Task1 ]
   pull_request:
-    branches: [ Lab_3]
+    branches: [ Lab4_Task1 ]
 
 jobs:
 
