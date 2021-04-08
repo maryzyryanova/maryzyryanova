@@ -10,7 +10,7 @@ void test()
     assert(Index_Row(3, 4, array) == -1);
     assert(Index_Column(3, 4, array) == 2);
     assert(Delete_Rows(3, 4, array) == 3);
-    assert(Delete_Columns(2, 3, 4, array) == 2);
+    assert(Delete_Columns(2, 4, array) == 2);
 }
 
 #undef main
