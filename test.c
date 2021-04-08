@@ -1,10 +1,11 @@
 #include <assert.h>
+#include <stdio.h>
 #include "functions.h"
 
 #define MAX_AMOUNT_OF_STRINGS 28
 #define MAX_STRING_SIZE 100
 
-int CompareStrings(char* array, char* test)
+int CompareStrings(char** array, char* test)
 {
     int i;
     for(i = 0; array[i] != test; i++)
