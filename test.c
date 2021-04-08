@@ -27,7 +27,7 @@ void test()
 
     for(i = 0; i < MAX_AMOUNT_OF_STRINGS; i++)
     {
-       fgets(test[i], MAX_AMOUNT_OF_STRINGS, output);
+       fgets(test[i], MAX_STRING_SIZE, output);
        assert(!CompareStrings(array[i], test[i]));
     }
 
