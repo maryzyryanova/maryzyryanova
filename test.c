@@ -11,7 +11,7 @@ void test()
     FILE* input;
     FILE* output;
     int i;
-    char* test[MAX_STRING_SIZE];
+    char test[MAX_STRING_SIZE];
     char** array = (char**)malloc(MAX_AMOUNT_OF_STRINGS * sizeof(char*));
 
     for (i = 0; i < MAX_AMOUNT_OF_STRINGS ; i++) {
@@ -28,7 +28,7 @@ void test()
     for(i = 0; i < MAX_AMOUNT_OF_STRINGS; i++)
     {
        fgets(test[i], MAX_STRING_SIZE, output);
-       assert(!CompareStrings(array[i], test[i]));
+       assert(!CompareStrings(array[i], test));
     }
 
 }
