@@ -1,21 +1,16 @@
 #include <assert.h>
-#include <stdlib.h>
+#include <math.h>
 #include <stdio.h>
+#include "task.c"
 #include "functions.h"
-
-#define N 3
-#define M 4
 
 void test()
 {
-    int i;
-    int** array = (int**)malloc(N * sizeof(int*));
-    Fill_Array(N, M, array);
-    assert(Index_Row(array, M, 0) == -1);
-    assert(Index_Column(array, N, 2) == 2);
-    assert(Delete_Rows(N, M, array) == 3);
-    assert(Delete_Columns(3, N, M, array) == 2);
-    free(array);
+    int array[3][4] = {(1, 1, 1, 0), (0, 0, 0, 0), (1, 1, 0, 1)};
+    assert(Index_Row(3, 4, array) == -1);
+    assert(Index_Column(3, 4, array) == 2);
+    assert(Delete_Rows(3, 4, array) == 3);
+    assert(Delete_Columns(2, 3, 4, array) == 2);
 }
 
 #undef main
