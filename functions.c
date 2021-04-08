@@ -1,15 +1,24 @@
 #include <stdlib.h>
-#include <string.h>
 #include <stdbool.h>
 #include "functions.h"
 
 #define MAX_AMOUNT_OF_STRINGS 28
 #define MAX_STRING_SIZE 100
 
+int StringLength(char* name)
+{
+    int size = 0, i;
+    for (i = 0; name[i] != '\0'; i++)
+    {
+        size++;     
+    }
+    return size;
+}
+
 void UpperCase(char* name)
 {
     int i;
-    for (i = 0; i < strlen(name); i++) {
+    for (i = 0; i < StringLength(name); i++) {
         if (name[i] != ' ')
         {
             continue;
@@ -81,6 +90,7 @@ void SortArray(char** array, int position)
                 {
                     break;
                 }
+                
                 value = true;
                 i++;
             }
