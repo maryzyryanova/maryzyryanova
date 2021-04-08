@@ -84,10 +84,10 @@ int Index_Row(int ** array, int M, int i)
     }
 }
 
-int Index_Column(int **array, int N, int j)
+int Index_Column(int **array, int A, int j)
 {
     int i, index, col = 0;
-    for (i = 0; i < N; i++)
+    for (i = 0; i < A; i++)
     {
         if (array[i][j] == 1)
         {
