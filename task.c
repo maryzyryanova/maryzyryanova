@@ -6,11 +6,10 @@ int main()
 {
     int N, M, A, B;
     int **array = (int**)malloc(N*sizeof(int *));
+    char** array = (char**)malloc(MAX_AMOUNT_OF_STRINGS * sizeof(char*));
     if(!array) 
     {
-        printf("Poshel nafig\n");
-        free(array);
-        array = NULL;
+        printf("Error\n");
         exit(1);
     }
     N = Rows();
