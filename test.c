@@ -18,7 +18,7 @@ void test()
     }
     for (i = 0; i < N; i++)
     { 
-        array[i] = (char *)malloc(M * sizeof(char));
+        array[i] = (int *)malloc(M * sizeof(int));
         if(!array[i]) 
         {
             for (i -= 1; i >= 0; i--) 
