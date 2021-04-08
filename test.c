@@ -9,19 +9,19 @@
 int CompareStrings(char* array, char* test)
 {
     int i;
-    for(i = 0; array[i] != test; i++)
+    for(i = 0; array[i] != test[i]; i++)
     {
-        if (array[i] > test)
+        if (array[i] > test[i])
         {
             return 1;
         }
 
-        if (array[i] < test)
+        if (array[i] < test[i])
         {
             return -1;
         }
 
-        if (array[i] == test)
+        if (array[i] == test[i])
         {
             return 0;
         }
@@ -33,7 +33,7 @@ void test()
     FILE* input;
     FILE* output;
     int i;
-    char test[MAX_AMOUNT_OF_STRINGS];
+    char*  test[MAX_AMOUNT_OF_STRINGS];
     char** array = (char**)malloc(MAX_AMOUNT_OF_STRINGS * sizeof(char*));
 
     for (i = 0; i < MAX_AMOUNT_OF_STRINGS ; i++) {
