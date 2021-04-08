@@ -128,7 +128,7 @@ int Delete_Columns(int A, int M, int **array)
     int i, j, column, wr = 0;
     for (j = 0; j < M; ++j)
     {
-        column = Index_Column(array, N, j);
+        column = Index_Column(array, A, j);
         bool allzero = true;
         for (i = 0; i < A; ++i)
         {
