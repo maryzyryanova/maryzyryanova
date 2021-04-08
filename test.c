@@ -4,38 +4,29 @@
 #include <stdlib.h>
 #include "functions.h"
 
+#define N 3
+#define M 4
+
 void test()
 {
     int i, success;
-    int **array = (int**)malloc(3*sizeof(int *));
+    int **array = (int**)malloc(N*sizeof(int *));
     if(!array) 
     {
         printf("Error\n");
-        free(array);
-        array = NULL;
         exit(1);
     }
-    for (i = 0; i < 3; i++)
+    for (i = 0; i < N; i++)
     { 
-        array[i] = (int *)malloc(4 * sizeof(int));
-    }
-    for (i = 0; i < 3; i++)
-    {
+        array[i] = (char *)malloc(M * sizeof(char));
         if(!array[i]) 
         {
-            printf("Error x2\n\n%d\n\n", i);
-            success = 0;
-            break;
-        }
-        if (success == 0) 
-        {
-            for (; i >= 0; i--) 
+            for (i -= 1; i >= 0; i--) 
             { 
                 free(array[i]);
-                printf("\n\n%d\n\n", i);
+                array[i] = NULL;
             }
             free(array);
-            printf("\n\n%d\n\n", i);
             array = NULL;
             exit(1);
         }
