@@ -112,7 +112,7 @@ int Delete_Rows(int N, int M, int **array)
         for (j = 0; j < M; ++j)
         {
             allzero = (row >= 0 && allzero);
-            array[wr][j] = array[i][j];
+            array[j][wr] = array[i][j];
         }
         if (!allzero)
         {
