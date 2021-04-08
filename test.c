@@ -10,7 +10,7 @@ void test()
 {
     int i;
     int** array = (int**)malloc(N * sizeof(int*));
-    FillArray(N, M, array);
+    Fill_Array(N, M, array);
     assert(Index_Row(array, N, 0) == -1);
     assert(Index_Column(array, M, 2) == 2);
     assert(Delete_Rows(N, M, array) == 3);
