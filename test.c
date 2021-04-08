@@ -31,10 +31,10 @@ void test()
             exit(1);
         }
     }
-    assert(Index_Row(array, 3, 2) == -1);
-    assert(Index_Column(array, 4, 3) == 2);
-    assert(Delete_Rows(3, 4, array) == 3);
-    assert(Delete_Columns(3, 4, array) == 2);
+    assert(Index_Row(array, M, 2) == -1);
+    assert(Index_Column(array, N, 2) == 2);
+    assert(Delete_Rows(N, M, array) == 3);
+    assert(Delete_Columns(3, M, array) == 2);
 }
 
 #undef main
