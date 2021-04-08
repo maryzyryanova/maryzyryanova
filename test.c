@@ -1,7 +1,6 @@
 #include <assert.h>
 #include <math.h>
 #include <stdio.h>
-#include "task.c"
 #include "functions.h"
 
 void test()
