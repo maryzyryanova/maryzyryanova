@@ -34,8 +34,8 @@ void test()
     
     array[0][0] = '1';
     array[0][1] = '1';
-    array[0][2] = '0';
-    array[0][3] = '1';
+    array[0][2] = '1';
+    array[0][3] = '0';
     array[1][0] = '0';
     array[1][1] = '0';
     array[1][2] = '0';
