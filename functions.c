@@ -42,19 +42,12 @@ void Fill_Array(int N, int M, int **array)
         array[i] = (int *)malloc(M * sizeof(int));
         if(!array[i]) 
         {
-            printf("Error x2\n\n%d\n\n", i);
-            success = 0;
-            break;
-        }
-        if (success == 0) 
-        {
-            for (; i >= 0; i--) 
+            for (i -= 1; i >= 0; i--) 
             { 
                 free(array[i]);
-                printf("\n\n%d\n\n", i);
+                array[i] = NULL;
             }
             free(array);
-            printf("\n\n%d\n\n", i);
             array = NULL;
             exit(1);
         }
