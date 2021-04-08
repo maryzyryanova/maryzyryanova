@@ -17,7 +17,9 @@ void test()
     assert(Delete_Columns(3, N, M, array) == 2);
     free(array);
 }
+
 #undef main
+
 int main() 
 {
   test();
