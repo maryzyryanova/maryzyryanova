@@ -18,7 +18,8 @@ void test()
     free(array);
 }
 #undef main
-int main() {
+int main() 
+{
   test();
   return 0;
 }
