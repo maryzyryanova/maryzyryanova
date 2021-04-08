@@ -18,6 +18,15 @@ void test()
         array[i] = (char*)malloc(MAX_STRING_SIZE * sizeof(char));
     }
     
+    if (!(input = fopen("List.txt", "r"))) {
+        printf("Error!!!");
+        exit(1);
+    }
+    if (!(output = fopen("Output.txt", "r"))) {
+        printf("Error!!!");
+        exit(1);
+    }
+    
     for (i = 0; i < MAX_AMOUNT_OF_STRINGS; i++) 
     {
         fgets(array[i], MAX_STRING_SIZE, input);
