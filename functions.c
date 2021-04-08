@@ -35,7 +35,7 @@ int Columns()
 
 void Fill_Array(int N, int M, int **array)
 {
-    int i, j, success;
+    int i, j;
     
     for (i = 0; i < N; i++)
     { 
@@ -97,7 +97,7 @@ int Index_Row(int ** array, int M, int i)
 
 int Index_Column(int **array, int A, int j)
 {
-    int i, index, col = 0;
+    int i, col = 0;
     for (i = 0; i < A; i++)
     {
         if (array[i][j] == 1)
