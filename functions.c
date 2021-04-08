@@ -35,7 +35,7 @@ int Columns()
 
 void Fill_Array(int N, int M, int **array)
 {
-    int i, j;
+    int i, j, success;
     
     for (i = 0; i < N; i++)
     { 
@@ -46,10 +46,20 @@ void Fill_Array(int N, int M, int **array)
             success = 0;
             break;
         }
+        if (success == 0) 
+        {
+            for (; i >= 0; i--) 
+            { 
+                free(array[i]);
+                printf("\n\n%d\n\n", i);
+            }
+            free(array);
+            printf("\n\n%d\n\n", i);
+            array = NULL;
+            return 1;
+        }
     }
     
-    
-
     for (i = 0; i < N; i++)
     {
         for (j = 0; j < M; j++)
