@@ -10,7 +10,7 @@ void test()
 {
     FILE* input;
     FILE* output;
-    int i;
+    int i, success;
     char test[MAX_STRING_SIZE];
     char** array = (char**)malloc(MAX_AMOUNT_OF_STRINGS * sizeof(char*));
     if(!array) 
