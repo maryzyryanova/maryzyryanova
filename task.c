@@ -11,7 +11,7 @@ int main()
     Fill_Array(N, M, array);
     Print_Array(N, M, array);
     A = Delete_Rows(N, M, array);
-    B = Delete_Columns(A, N, M, array);
+    B = Delete_Columns(A, M, array);
     Print_Array(A, B, array);
     free(array);
     return 0;
