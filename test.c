@@ -32,18 +32,18 @@ void test()
         }
     }
     
-    array[0][0] = '1';
-    array[0][1] = '1';
-    array[0][2] = '1';
-    array[0][3] = '0';
-    array[1][0] = '0';
-    array[1][1] = '0';
-    array[1][2] = '0';
-    array[1][3] = '0';
-    array[2][0] = '1';
-    array[2][1] = '1';
-    array[2][2] = '0';
-    array[2][3] = '1';
+    array[0][0] = 1;
+    array[0][1] = 1;
+    array[0][2] = 1;
+    array[0][3] = 0;
+    array[1][0] = 0;
+    array[1][1] = 0;
+    array[1][2] = 0;
+    array[1][3] = 0;
+    array[2][0] = 1;
+    array[2][1] = 1;
+    array[2][2] = 0;
+    array[2][3] = 1;
     
     assert(Index_Row(array, M, 0) == -1);
     assert(Delete_Rows(N, M, array) == 3);
