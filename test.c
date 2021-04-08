@@ -46,8 +46,8 @@ void test()
     array[2][3] = '1';
     
     assert(Index_Row(array, M, 0) == -1);
-    assert(Index_Column(array, 3, 2) == 2);
     assert(Delete_Rows(N, M, array) == 3);
+    assert(Index_Column(array, 3, 2) == 2);
     assert(Delete_Columns(3, M, array) == 2);
 }
 
