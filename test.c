@@ -31,8 +31,9 @@ void test()
             exit(1);
         }
     }
-    assert(Index_Row(array, 4, 0) == -1);
-    assert(Index_Column(array, 3, 0) == -1);
+    
+    assert(Index_Row(array, 4, 2) == -1);
+    assert(Index_Column(array, 3, 2) == 2);
     assert(Delete_Rows(3, 4, array) == 3);
     assert(Delete_Columns(3, 4, array) == 2);
 }
