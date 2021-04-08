@@ -10,7 +10,7 @@ void test()
     int **array = (int**)malloc(3*sizeof(int *));
     if(!array) 
     {
-        printf("Errorg\n");
+        printf("Error\n");
         free(array);
         array = NULL;
         exit(1);
@@ -18,6 +18,8 @@ void test()
     for (i = 0; i < 3; i++)
     { 
         array[i] = (int *)malloc(4 * sizeof(int));
+    }
+    for (i = 0; i < 3; i++)
         if(!array[i]) 
         {
             printf("Error x2\n\n%d\n\n", i);
