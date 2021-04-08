@@ -109,7 +109,6 @@ int Delete_Rows(int N, int M, int **array)
     for (i = 0; i < N; ++i)
     {
         row = Index_Row(array, M, i);
-        printf("Row: %d\n", row);
         bool allzero = true;
         for (j = 0; j < M; ++j)
         {
@@ -131,7 +130,6 @@ int Delete_Columns(int N, int M, int **array)
     for (j = 0; j < M; ++j)
     {
         column = Index_Column(array, N, j);
-        printf("Column: %d\n", column);
         bool allzero = true;
         for (i = 0; i < N; ++i)
         {
