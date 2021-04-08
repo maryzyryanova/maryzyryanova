@@ -32,9 +32,9 @@ void test()
         }
     }
     assert(Index_Row(array, M, 2) == -1);
-    assert(Index_Column(array, N, 2) == 2);
-    assert(Delete_Rows(N, M, array) == 3);
-    assert(Delete_Columns(3, M, array) == 2);
+    assert(Index_Column(array, N, 3) == 3);
+    assert(Delete_Rows(N, M, array) == 2);
+    assert(Delete_Columns(2, M, array) == 2);
 }
 
 #undef main
