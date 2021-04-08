@@ -31,6 +31,7 @@ void test()
             exit(1);
         }
     }
+    Fill_Array(N, M, array);
     assert(Index_Row(array, M, 0) == -1);
     assert(Index_Column(array, N, 2) == 2);
     assert(Delete_Rows(N, M, array) == 3);
