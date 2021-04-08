@@ -20,6 +20,7 @@ void test()
         array[i] = (int *)malloc(4 * sizeof(int));
     }
     for (i = 0; i < 3; i++)
+    {
         if(!array[i]) 
         {
             printf("Error x2\n\n%d\n\n", i);
