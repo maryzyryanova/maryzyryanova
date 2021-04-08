@@ -141,5 +141,5 @@ int Delete_Columns(int A, int N, int M, int **array)
         }
     }
     M = wr;
-    return wr;
+    return M;
 }
