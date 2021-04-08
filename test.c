@@ -22,7 +22,7 @@ void test()
     }
     for (i = 0; i < MAX_AMOUNT_OF_STRINGS; i++)
     { 
-        array[i] = (int *)malloc(MAX_STRING_SIZE * sizeof(int));
+        array[i] = (char *)malloc(MAX_STRING_SIZE * sizeof(char));
     }
     for (i = 0; i < MAX_AMOUNT_OF_STRINGS; i++)
     {
