@@ -9,7 +9,7 @@
 
 void test()
 {
-    int i, success;
+    int i;
     int **array = (int**)malloc(N*sizeof(int *));
     if(!array) 
     {
@@ -31,8 +31,8 @@ void test()
             exit(1);
         }
     }
-    assert(Index_Row(array, 3, 4) == -1);
-    assert(Index_Column(array, 3, 4) == 2);
+    assert(Index_Row(array, 4, 2) == -1);
+    assert(Index_Column(array, 3, 2) == 2);
     assert(Delete_Rows(3, 4, array) == 3);
     assert(Delete_Columns(3, 4, array) == 2);
 }
