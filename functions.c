@@ -134,7 +134,7 @@ int Delete_Columns(int A, int N, int M, int **array)
         for (i = 0; i < A; ++i)
         {
             allzero = (column >= 0 && allzero);
-            array[i][wr] = array[j][i];
+            array[j][wr] = array[j][i];
         }
         if (!allzero)
         {
