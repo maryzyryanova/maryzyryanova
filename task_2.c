@@ -7,7 +7,7 @@
 
 int main()
 {
-    int i;
+    int i, success;
     FILE *input;
     FILE *output;
     char** array = (char**)malloc(MAX_AMOUNT_OF_STRINGS * sizeof(char*));
