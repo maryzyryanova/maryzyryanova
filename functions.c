@@ -123,7 +123,7 @@ int Delete_Rows(int N, int M, int **array)
     return N;
 }
 
-int Delete_Columns(int A, int N, int M, int **array)
+int Delete_Columns(int A, int M, int **array)
 {
     int i, j, column, wr = 0;
     for (j = 0; j < M; ++j)
