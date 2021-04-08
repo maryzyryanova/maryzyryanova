@@ -94,8 +94,7 @@ void Quick_Sort(char** array, int start, int finish, int position)
 void SortArray(char** array, int position)
 {
     Quick_Sort(array, 0, MAX_AMOUNT_OF_STRINGS - 1, position);
-    int i;
-    int temp;
+    int i, temp;
     bool value = true;
     while (position != 5)
     {
