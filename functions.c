@@ -137,7 +137,7 @@ int Delete_Columns(int A, int N, int M, int **array)
         }
         if (!allzero)
         {
-            wr++;
+            ++wr;
         }
     }
     M = wr;
