@@ -1,5 +1,6 @@
 #include <assert.h>
 #include <stdio.h>
+#include <stdlib.h>
 #include "functions.h"
 
 #define MAX_AMOUNT_OF_STRINGS 28
