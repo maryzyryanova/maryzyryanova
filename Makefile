@@ -10,7 +10,7 @@ test:
 	
 valgrind_check:
 	echo "3\n4\n" > input.txt
-	valgrind ./test < input.txt
+	valgrind --track-origins=yes ./test < input.txt
 	
 linter_check:
 	cpp task.c
