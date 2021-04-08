@@ -56,7 +56,7 @@ void Fill_Array(int N, int M, int **array)
             free(array);
             printf("\n\n%d\n\n", i);
             array = NULL;
-            return 1;
+            exit(1);
         }
     }
     
