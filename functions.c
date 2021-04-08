@@ -124,14 +124,14 @@ int Delete_Rows(int N, int M, int **array)
     return N;
 }
 
-int Delete_Columns(int N, int M, int **array)
+int Delete_Columns(int A, int N, int M, int **array)
 {
     int i, j, column, wr = 0;
     for (j = 0; j < M; ++j)
     {
         column = Index_Column(array, N, j);
         bool allzero = true;
-        for (i = 0; i < N; ++i)
+        for (i = 0; i < A; ++i)
         {
             allzero = (column >= 0 && allzero);
             array[i][wr] = array[i][j];
