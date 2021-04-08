@@ -11,11 +11,10 @@ void test()
     int i;
     int** array = (int**)malloc(N * sizeof(int*));
     Fill_Array(N, M, array);
-    int A = Delete_Rows(N, M, array);
     assert(Index_Row(array, M, 0) == -1);
     assert(Index_Column(array, N, 2) == 2);
     assert(Delete_Rows(N, M, array) == 3);
-    assert(Delete_Columns(A, N, M, array) == 2);
+    assert(Delete_Columns(3, N, M, array) == 2);
 }
 #undef main
 int main() {
