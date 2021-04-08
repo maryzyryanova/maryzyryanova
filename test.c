@@ -33,7 +33,7 @@ void test()
     FILE* input;
     FILE* output;
     int i;
-    char*  test[MAX_AMOUNT_OF_STRINGS];
+    char* test[MAX_AMOUNT_OF_STRINGS];
     char** array = (char**)malloc(MAX_AMOUNT_OF_STRINGS * sizeof(char*));
 
     for (i = 0; i < MAX_AMOUNT_OF_STRINGS ; i++) {
@@ -49,8 +49,8 @@ void test()
 
     for(i = 0; i < MAX_AMOUNT_OF_STRINGS; i++)
     {
-       fgets(test, MAX_AMOUNT_OF_STRINGS, output);
-       assert(!CompareStrings(array[i], test));
+       fgets(test[i], MAX_AMOUNT_OF_STRINGS, output);
+       assert(!CompareStrings(array[i], test[i]));
     }
 
 }
