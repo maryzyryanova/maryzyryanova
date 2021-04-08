@@ -125,7 +125,7 @@ int Delete_Rows(int N, int M, int **array)
 
 int Delete_Columns(int A, int N, int M, int **array)
 {
-    int i, j, column, wr = 0;
+    int i, j, column, wr = M;
     for (j = 0; j < M; ++j)
     {
         column = Index_Column(array, N, j);
@@ -133,13 +133,13 @@ int Delete_Columns(int A, int N, int M, int **array)
         for (i = 0; i < A; ++i)
         {
             allzero = (column >= 0 && allzero);
-            array[i][wr] = array[i][j];
+            array[wr][i] = array[i][j];
         }
         if (!allzero)
         {
-            ++wr;
+            --M;
         }
     }
-    M = wr;
-    return M;
+    wr = M;
+    return wr;
 }
