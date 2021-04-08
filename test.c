@@ -31,6 +31,10 @@ void test()
        assert(!CompareStrings(array[i], test));
     }
 
+    for (i = 0; i < MAX_AMOUNT_OF_STRINGS; i++) {
+        free(array[i]);
+    }
+    free(array);
 }
 
 #undef main
