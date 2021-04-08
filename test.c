@@ -6,7 +6,15 @@
 
 void test()
 {
+    int i, success;
     int **array = (int**)malloc(3*sizeof(int *));
+    if(!array) 
+    {
+        printf("Errorg\n");
+        free(array);
+        array = NULL;
+        exit(1);
+    }
     for (i = 0; i < 3; i++)
     { 
         array[i] = (int *)malloc(4 * sizeof(int));
