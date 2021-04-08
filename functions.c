@@ -15,6 +15,24 @@ int StringLength(char* name)
     return size;
 }
 
+bool CompareStrings(char* array, char* test)
+{
+    int i;
+    if(StringLength(array) != StringLength(test))
+    {
+        return true;
+    }
+    
+    for(i = 0; i < StringLength(array); ++i) 
+    {
+        if(array[i] != test[i])
+        {
+            return true;
+        }
+    }
+    return false;
+}
+
 void UpperCase(char* name)
 {
     int i;
