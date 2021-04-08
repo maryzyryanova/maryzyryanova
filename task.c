@@ -11,7 +11,7 @@ int main()
         printf("Poshel nafig\n");
         free(array);
         array = NULL;
-        return 1;
+        exit(1);
     }
     N = Rows();
     M = Columns();
