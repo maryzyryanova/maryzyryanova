@@ -112,7 +112,7 @@ int Delete_Rows(int N, int M, int **array)
         for (j = 0; j < M; ++j)
         {
             allzero = (row >= 0 && allzero);
-            array[i][wr] = array[i][j];
+            array[wr][j] = array[i][j];
         }
         if (!allzero)
         {
@@ -133,7 +133,7 @@ int Delete_Columns(int A, int N, int M, int **array)
         for (i = 0; i < A; ++i)
         {
             allzero = (column >= 0 && allzero);
-            array[wr][j] = array[i][j];
+            array[i][wr] = array[i][j];
         }
         if (!allzero)
         {
