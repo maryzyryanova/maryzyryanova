@@ -96,8 +96,7 @@ int Index_Column(int **array, int N, int j)
     }
     if (col == 1)
     {
-        index = j;
-        return index; 
+        return j; 
     } else {
         return -1;
     }
