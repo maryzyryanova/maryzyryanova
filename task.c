@@ -6,6 +6,13 @@ int main()
 {
     int N, M, A, B;
     int **array = (int**)malloc(N*sizeof(int *));
+    if(!array) 
+    {
+        printf("Poshel nafig\n");
+        free(array);
+        array = NULL;
+        return 1;
+    }
     N = Rows();
     M = Columns();
     Fill_Array(N, M, array);
