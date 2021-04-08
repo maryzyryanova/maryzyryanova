@@ -1,5 +1,5 @@
 #include <assert.h>
-#include "task_2.c"
+#include "functions.h"
 
 #define MAX_AMOUNT_OF_STRINGS 28
 #define MAX_STRING_SIZE 100
