@@ -30,11 +30,6 @@ void test()
        fgets(test, MAX_STRING_SIZE, output);
        assert(!CompareStrings(array[i], test));
     }
-
-    for (i = 0; i < MAX_AMOUNT_OF_STRINGS; i++) {
-        free(array[i]);
-    }
-    free(array);
 }
 
 #undef main
