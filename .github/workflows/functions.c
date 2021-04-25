@@ -30,3 +30,13 @@ struct list * DeleteFromList(struct list *current, struct list *root){
   free(current);
   return(temp);
 }
+
+void PrintList(struct list *current)
+{
+  struct list *str;
+  str = current;
+  do {
+    printf("%d ", str->field);
+    str = str->next;
+  } while (str != NULL);
+}
