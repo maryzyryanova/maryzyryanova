@@ -5,14 +5,14 @@
 int main()
 {
     int N, M, A, B;
+    N = Rows();
+    M = Columns();
     int **array = (int**)malloc(N*sizeof(int *));
     if(!array) 
     {
         printf("Error\n");
         exit(1);
     }
-    N = Rows();
-    M = Columns();
     Fill_Array(N, M, array);
     Print_Array(N, M, array);
     A = Delete_Rows(N, M, array);
