@@ -9,5 +9,7 @@ int main(){
     struct list* list_2;
     FromBuffer(buffer_1, list_1);
     FromBuffer(buffer_2, list_2);
+    Sort(list_1);
+    Sort(list_2);
     return 0;
 }

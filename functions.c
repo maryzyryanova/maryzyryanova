@@ -46,11 +46,30 @@ void PrintList(struct list *current)
 
 void FromBuffer(int buffer[5], struct list* list_1){
   int i;
-  struct list* current;
   for (i = 0; i < 5; i++)
   {
-    current = Initialise(buffer[i]);
-    AddToList(current, buffer[i]);
+    list_1 = Initialise(buffer[i]);
+    AddToList(list_1, buffer[i]);
   }
-  PrintList(current);
+  PrintList(list_1);
+}
+
+struct list* Sort(struct list* list_1)
+{
+  int i, j;
+  struct list temp;
+  for (i = 0; i < 5; i++)
+  {
+    for (j = 4; j > i; j--)
+    {
+      if (list_1[j - 1] > list_1[j])
+      {
+        temp = list_1[j - 1];
+        list_1[j - 1] = list_1[j];
+        list_1[j] = temp;
+      }
+    }
+    
+  }
+  return list_1;
 }
