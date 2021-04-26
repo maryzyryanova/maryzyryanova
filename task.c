@@ -9,7 +9,6 @@ int main(){
     struct list* list_2;
     FromBuffer(buffer_1, list_1);
     FromBuffer(buffer_2, list_2);
-    
     PrintList(list_1);
     PrintList(list_2);
     return 0;
