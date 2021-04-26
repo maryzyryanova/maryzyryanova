@@ -2,64 +2,14 @@
 #include <stdlib.h>
 #include "functions.c"
 
-#define AMOUNT_OF_STRINGS_1 10
-#define MAX_LENGTH 6
-#define AMOUNT_OF_STRINGS_2 10 
-
 int main(){
-    FILE* List_1;
-    FILE* List_2;
-    List_1 = fopen("List_1.txt", "r");
-    List_2 = fopen("List_2.txt", "w");
-
-    if (List_1 == NULL)
-    {
-        printf ("Error, file is not opened!\n"); 
-        return -1;
-    } else {
-        printf("File is opened!\n");
-    }
-
-    if (List_2 == NULL)
-    {
-        printf ("Error, file is not opened!\n"); 
-        return -1;
-    } else {
-        printf("File is opened!\n");
-    }
-
+    int buffer_1[5] = {2, 3, 1, 7, 4};
+    int buffer_2[5] = {3, 1, 3, 5, 8};
     struct list* list_1;
     struct list* list_2;
-    char buffer_1[AMOUNT_OF_STRINGS_1][MAX_LENGTH];
-    char buffer_2[AMOUNT_OF_STRINGS_2][MAX_LENGTH];
-    int i, j;
-    int ptr, size_1 = 0, size_2 = 0;
-
-    for (i = 0; i < AMOUNT_OF_STRINGS_1; i++)
-    {
-        while(fgets(buffer_1[i], MAX_LENGTH, List_1) != NULL)
-        {
-            ptr = buffer_1[i][0] - '0';
-            Initialise(ptr);
-            AddToList(list_1, ptr);
-            size_1++;
-        }   
-    }
-    
-    for (j = 0; j < AMOUNT_OF_STRINGS_2; j++)
-    {
-        while (fgets(buffer_2[j], MAX_LENGTH, List_2) != NULL)
-        {
-            ptr = buffer_2[j][0] - '0';
-            Initialise(ptr);
-            AddToList(list_2, ptr);
-            size_2++;
-        }
-        
-    }
-
-    PrintList(list_1, size_1);
-    PrintList(list_2, size_2);
-    
+    FromBuffer(buffer_1, list_1);
+    FromBuffer(buffer_2, list_2);
+    PrintList(list_1);
+    PrintList(list_2);
     return 0;
 }

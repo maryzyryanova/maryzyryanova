@@ -2,7 +2,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-
 struct list* Initialise(int a){
     struct list* current;
     current = (struct list*)malloc(sizeof(struct list));
@@ -32,15 +31,25 @@ struct list * DeleteFromList(struct list *current, struct list *root){
   return(temp);
 }
 
-void PrintList(struct list *current, int size)
+void PrintList(struct list *current)
 {
   struct list *str;
   int i;
   str = current;
-  for (i = 0; i < size; i++)
+  for (i = 0; i < 10; i++)
   {
     printf("%d ", str->field);
     str = str->next;  
   }
   printf("\n");
+}
+
+struct list* FromBuffer(int buffer[5], struct list* list_1){
+  int i;
+  for (i = 0; i < 5; i++)
+  {
+    Initialise(buffer[i]);
+    AddToList(list_1, buffer[i]);
+  }
+  return list_1;
 }
