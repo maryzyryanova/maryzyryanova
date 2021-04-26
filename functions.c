@@ -44,12 +44,13 @@ void PrintList(struct list *current)
   printf("\n");
 }
 
-struct list* FromBuffer(int buffer[5], struct list* list_1){
+void FromBuffer(int buffer[5], struct list* list_1){
   int i;
+  struct list* current;
   for (i = 0; i < 5; i++)
   {
-    Initialise(buffer[i]);
-    AddToList(list_1, buffer[i]);
+    current = Initialise(buffer[i]);
+    AddToList(current, buffer[i]);
   }
-  return list_1;
+  PrintList(current);
 }
