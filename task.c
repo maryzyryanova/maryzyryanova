@@ -4,7 +4,7 @@
 
 #define AMOUNT_OF_STRINGS_1 10
 #define MAX_LENGTH 6
-#define AMOUNT_OF_STRINGS_2 20 
+#define AMOUNT_OF_STRINGS_2 10 
 
 int main(){
     FILE* List_1;
@@ -33,28 +33,33 @@ int main(){
     char buffer_1[AMOUNT_OF_STRINGS_1][MAX_LENGTH];
     char buffer_2[AMOUNT_OF_STRINGS_2][MAX_LENGTH];
     int i, j;
+    int ptr, size_1 = 0, size_2 = 0;
 
     for (i = 0; i < AMOUNT_OF_STRINGS_1; i++)
     {
         while(fgets(buffer_1[i], MAX_LENGTH, List_1) != NULL)
         {
-            Initialise(buffer_1[i]);
-            AddToList(list_1, buffer[i]_1 - '0');
+            ptr = buffer_1[i][0] - '0';
+            Initialise(ptr);
+            AddToList(list_1, ptr);
+            size_1++;
         }   
     }
     
     for (j = 0; j < AMOUNT_OF_STRINGS_2; j++)
     {
-        while (fgets(buffer_2[i], MAX_LENGTH, List_2) != NULL)
+        while (fgets(buffer_2[j], MAX_LENGTH, List_2) != NULL)
         {
-            Initialise(buffer_2[i]);
-            AddToList(list_2, buffer_2[i] - '0');
+            ptr = buffer_2[j][0] - '0';
+            Initialise(ptr);
+            AddToList(list_2, ptr);
+            size_2++;
         }
         
     }
 
-    PrintList(list_1);
-    PrintList(list_2);
+    PrintList(list_1, size_1);
+    PrintList(list_2, size_2);
     
     return 0;
 }

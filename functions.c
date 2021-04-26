@@ -1,5 +1,6 @@
 #include "functions.h"
 #include <stdio.h>
+#include <stdlib.h>
 
 
 struct list* Initialise(int a){
@@ -31,12 +32,15 @@ struct list * DeleteFromList(struct list *current, struct list *root){
   return(temp);
 }
 
-void PrintList(struct list *current)
+void PrintList(struct list *current, int size)
 {
   struct list *str;
+  int i;
   str = current;
-  do {
+  for (i = 0; i < size; i++)
+  {
     printf("%d ", str->field);
-    str = str->next;
-  } while (str != NULL);
+    str = str->next;  
+  }
+  printf("\n");
 }
