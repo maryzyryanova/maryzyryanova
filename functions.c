@@ -10,13 +10,13 @@ struct node* New(){
         exit(1);
     }
 
-    list->x = (int*)malloc(sizeof(struct node) * 100);
+    list->x = (int*)malloc(sizeof(int) * 100);
     if(!list->x) 
     {
         printf("Error\n");
         exit(1);
     }
-
+    
     list->next = NULL;
     return list;
 }
