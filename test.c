@@ -1,5 +1,7 @@
 #include "functions.h"
 #include <assert.h>
+#include <stdio.h>
+#include <stdlib.h>
 
 void TestSort()
 {
