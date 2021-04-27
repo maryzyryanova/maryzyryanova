@@ -29,10 +29,10 @@ void TestSort()
     Sort(tail2, size2);
     Sort(tail3, size3);
 
-    tail2 = tail3;
+    tail2->x = tail3->x;
 
     assert(tail1->x == tail2->x);
-    assert(tail2->x != tail3->x);
+    assert(!(tail2->x == tail3->x));
 }
 
 #undef main
