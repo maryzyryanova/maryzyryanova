@@ -40,6 +40,17 @@ void TestSort()
             tail2 = tail2->next;
         }
     }
+
+    if (size2 != size3)
+    {
+        while(tail3 != NULL)
+        {
+            assert(!(tail2->x == tail3->x));
+            tail2 = tail2->next;
+            tail3 = tail3->next;
+
+        }
+    }
 }
 
 #undef main
