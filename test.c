@@ -32,7 +32,7 @@ void TestSort()
     tail2 = tail3;
 
     assert(tail1->x == tail2->x);
-    assert(!(tail2->x == tail3->x));
+    assert(tail2->x != tail3->x);
 }
 
 #undef main
