@@ -50,6 +50,6 @@ int main()
         }
     }
     printf("\n");
-    Print(tail3,size3);
+    Print(tail3, size3);
     return 0;
 }
