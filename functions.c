@@ -50,9 +50,10 @@ struct node* get(struct node *tail,int index) {
 
 void Sort(struct node* tail, int size)
 {
-    for (int i = 0 ; i < size - 1; ++i)
+    int i, j;
+    for (i = 0 ; i < size - 1; ++i)
     {
-        for (int j = 0 ; j < size - 1 ; ++j)
+        for (j = 0 ; j < size - 1 ; ++j)
         {
             if (get(tail,j)->x > get(tail,j+1)->x)
             {
@@ -65,7 +66,8 @@ void Sort(struct node* tail, int size)
 }
 
 void Print (struct node* tail, int size){
-    for (int i = 0 ; i < size; ++i)
+    int i;
+    for (i = 0 ; i < size; ++i)
     {
         printf("%d",get(tail, i)->x);
         printf("\n");
