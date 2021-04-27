@@ -12,8 +12,9 @@ int main()
     int size3 = 0;
     int buff1[5] = {1, 4, 3, 2, 5};
     int buff2[5] = {10, 9, 2, 1, 5};
+    int i, j;
 
-    for (int i = 0 ; i < 5; i++ )
+    for (i = 0 ; i < 5; i++ )
     {
         tail1 = PushBack(head1, tail1, &size1, buff1[i]);
         tail2 = PushBack(head2, tail2, &size2, buff2[i]);
@@ -26,15 +27,15 @@ int main()
     printf("\n");
     Print(tail2, size2);
 
-    for (int i = 0; i < size1; i++)
+    for (i = 0; i < size1; i++)
     {
         tail3 = PushBack(head3,tail3,&size3,get(tail1,i) -> x);    
     }
     
-    for (int i = 0 ; i < size2; ++i)
+    for (i = 0 ; i < size2; ++i)
     {
        int flag = 0;
-        for (int j = 0 ; j < size3 ; ++j)
+        for (j = 0 ; j < size3 ; ++j)
         {
             if (get(tail2,i)->x == get(tail3, j)->x)
             {

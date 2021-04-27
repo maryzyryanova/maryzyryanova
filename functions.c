@@ -28,15 +28,14 @@ struct node* PushBack(struct node *head, struct node* tail, int* size, int x) {
         *size += 1;
         tail->x = x;
         head->x = x;
-        return tail;
     } else {
         struct node* list = New();
         *size += 1;
         list->next = tail;
         tail = list;
         list->x = x;
-        return tail;
     }
+    return tail;
 }
 
 struct node* get(struct node *tail,int index) {
