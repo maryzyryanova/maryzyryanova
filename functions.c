@@ -9,7 +9,6 @@ struct node* New(){
         printf("Error\n");
         exit(1);
     }
-
     list->next = NULL;
     return list;
 }
