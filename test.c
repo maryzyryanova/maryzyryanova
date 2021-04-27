@@ -31,11 +31,11 @@ void TestSort()
     
     if (size1 == size2)
     {
-        while (tail1 != NULL && tail2 != NULL)
+        while (tail1 != NULL || tail2 != NULL)
         {
             assert(tail1->x == tail2->x);
-            tail1->next;
-            tail2->next;
+            tail1 = tail1->next;
+            tail2 = tail2->next;
         }
     }
 }
