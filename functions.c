@@ -2,41 +2,32 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-struct list* Initialise(int a){
+void push_back(int a , struct list* Head, struct list* Tail){
     struct list* current;
-    current = (struct list*)malloc(sizeof(struct list));
-    current->field = a;
-    current->next = NULL;
-    return(current);
+    //current = (struct list*)malloc(sizeof(struct list));
+    if ( Head == NULL && Tail == NULL) {
+        Head = Tail = current;
+        current->field = a;
+        current->next = NULL; 
+        Head->Size++;
+        Tail->Size = Head->Size;
+    }
+    else {
+        struct list* temp;
+        current->field = a ;
+        current->next = Tail;
+        Tail = current;
+        Tail->Size++;
+        Head->Size++;
+    }
 }
 
-struct list * AddToList(struct list* current, int number){
-  struct list *temp, *str;
-  temp = (struct list*)malloc(sizeof(struct list));
-  str = current->next;
-  current->next = temp; 
-  temp->field = number; 
-  temp->next = str; 
-  return(temp);
-}
-
-struct list * DeleteFromList(struct list *current, struct list *root){
-  struct list *temp;
-  temp = root;
-  while (temp->next != current){
-    temp = temp->next;
-  }
-  temp->next = current->next;
-  free(current);
-  return(temp);
-}
-
-void PrintList(struct list *current)
+/*void PrintList(struct list *Tail)
 {
   struct list *str;
   int i;
-  str = current;
-  for (i = 0; i < 10; i++)
+  str = Tail;
+  for (i = 0; i < str->Size; i++)
   {
     printf("%d ", str->field);
     str = str->next;  
@@ -44,32 +35,33 @@ void PrintList(struct list *current)
   printf("\n");
 }
 
-void FromBuffer(int buffer[5], struct list* list_1){
+void FromBuffer(int buffer[5], struct list* Tail){
   int i;
   for (i = 0; i < 5; i++)
   {
-    list_1 = Initialise(buffer[i]);
-    AddToList(list_1, buffer[i]);
+    push_back(buffer[i], Tail);
   }
-  PrintList(list_1);
 }
 
-struct list* Sort(struct list* list_1)
+void Sort(struct list* list_1 , struct list* Head,struct list* Tail)
 {
   int i, j;
-  struct list temp;
-  for (i = 0; i < 5; i++)
+  struct list_1* node;
+  
+  for (i = 0; i < 4; i++)
   {
-    for (j = 4; j > i; j--)
+    for (j = 0; j < 4; j++)
     {
-      if (list_1[j - 1] > list_1[j])
+      if (list_1->field > list_1->next->field)
       {
-        temp = list_1[j - 1];
-        list_1[j - 1] = list_1[j];
-        list_1[j] = temp;
+        int buffer = list_1 -> field;
+        list_1 ->field = list_1->next->field;
+        list_1->next->field = buffer;
       }
+      
     }
     
   }
   return list_1;
 }
+*/

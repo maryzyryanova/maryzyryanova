@@ -1,11 +1,37 @@
-struct list
-{
-    int field;
-    struct list* next;
+int size = 0;
+struct node {
+    struct node *next;
+    int x;
 };
+struct node *head,*tail;
 
-struct list* Initialise(int a);
-struct list* AddToList(struct list* current, int number);
-struct list * DeleteFromList(struct list *current, struct list *root);
-void PrintList(struct list *current);
-void FromBuffer(int buffer[5], struct list* list_1);
+struct node* New(){
+    size++;
+    struct node *v;
+    v = malloc(sizeof(struct node) * 1);
+    v->x = malloc(sizeof(int) * 100);
+    v -> next = NULL;
+    return v;
+}
+
+void push_r(int x) {
+    if(size == 0)
+    {
+        head = tail = New();
+        tail -> x = x;
+        head -> x = x;
+    } else {
+        struct node* v = New();
+        v->next = tail;
+        tail = v;
+        v->x = x;
+    }
+}
+
+struct node* get(int index) {
+    struct node * cur = tail;
+    while(index--) {
+        cur = cur -> next;
+    }
+    return cur;
+}
