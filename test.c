@@ -9,7 +9,7 @@ void TestSort()
     int size1 = 0;
     int size2 = 0;
     int size3 = 0;
-    int right[3]] = {1, 2, 3};
+    int right[3] = {1, 2, 3};
     int unsorted[3] = {3, 2, 1};
     int wrong[4] = {5, 2, 1, 3};
     int i, j;
