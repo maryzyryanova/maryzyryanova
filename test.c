@@ -43,7 +43,7 @@ void TestSort()
 
     if (size2 != size3)
     {
-        while(tail3 != NULL)
+        while(tail2 != NULL)
         {
             assert(!(tail2->x == tail3->x));
             tail2 = tail2->next;
