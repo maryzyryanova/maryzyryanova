@@ -11,7 +11,7 @@ void TestSort()
     int size3 = 0;
     int right[3] = {1, 2, 3};
     int unsorted[3] = {3, 2, 1};
-    int wrong[4] = {5, 2, 1, 3};
+    int wrong[4] = {5, 4, 1, 3};
     int i, j;
 
     for (i = 0 ; i < 3; i++ )
@@ -30,7 +30,7 @@ void TestSort()
     Sort(tail3, size3);
     
     assert(tail1->x == tail2->x);
-    assert(!(tail1->x == tail3->x));
+    assert(!(tail2->x == tail3->x));
 }
 
 #undef main
