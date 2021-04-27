@@ -48,7 +48,6 @@ struct node* get(struct node *tail,int index) {
     return current;
 }
 
-
 void Sort(struct node* tail, int size)
 {
     for (int i = 0 ; i < size - 1; ++i)
