@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include "functions.h"
 
+int s;
 struct node* Add(int x, struct node* tree)
 {
     if (tree == NULL) 
@@ -54,12 +55,15 @@ int MaxLengthAndSum(struct node* tree, int length, int sum)
 
     if (left == 0 && right == 0) 
     {
+        s = sum;
         return length;
     } else if (left > right) {
         sum = sumLeft;
+        s = sum;
         return left;
     } else {
         sum = sumRight;
+        s = sum;
         return right;
     }
 }
@@ -69,9 +73,20 @@ int GetLength(struct node* tree, int sum)
     if (tree)
     {
         int length = MaxLengthAndSum(tree, 0, sum);
-        return length + 1;
+        return length;
     } else {
         return 0;
     }
+}
+
+int GetSum(struct node* tree){
+    if (tree)
+    {
+        int sum = s;
+        return sum;
+    } else {
+        return 0;
+    }
+    
 }
 
