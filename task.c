@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "functions.h"
+#include "functions.c"
 
 int main()
 {
@@ -13,7 +13,7 @@ int main()
         scanf("%d", &N);
         root = Add(N, root);
     }while(getchar() != '\n');
-    length = GetSum(root, sum);
+    length = GetLength(root, sum);
     Print(root);
     printf("\nThe length of the longest branch: %d\nThe sum of the longest branch: %d", length, sum);
     return 0;
