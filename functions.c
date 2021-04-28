@@ -58,12 +58,10 @@ int MaxLengthAndSum(struct node* tree, int length, int sum)
         s = sum;
         return length;
     } else if (left > right) {
-        sum = sumLeft;
-        s = sum;
+        s = sumLeft;
         return left;
     } else {
-        sum = sumRight;
-        s = sum;
+        s = sumRight;
         return right;
     }
 }
@@ -82,8 +80,7 @@ int GetLength(struct node* tree, int sum)
 int GetSum(struct node* tree){
     if (tree)
     {
-        int sum = s;
-        return sum;
+        return s;
     } else {
         return 0;
     }
