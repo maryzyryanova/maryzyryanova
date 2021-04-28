@@ -4,7 +4,7 @@
 
 int main()
 {
-    int N, i, length, sum = 0;
+    int N, i, max, height = 0, sum = 0;
     struct node* root;
     root = NULL;
     printf("Your numbers: ");
@@ -13,9 +13,9 @@ int main()
         scanf("%d", &N);
         root = Add(N, root);
     }while(getchar() != '\n');
-    length = GetLength(root, sum);
-    sum = GetSum(root);
     Print(root);
-    printf("\nThe length of the longest branch: %d\nThe sum of the longest branch: %d", length, sum);
+    max = Height(root, height);
+    sum = Sum(root, sum);
+    printf("\nHeight: %d\nSum: %d", max, sum);
     return 0;
 }

@@ -2,7 +2,11 @@
 #include <stdlib.h>
 #include "functions.h"
 
-int s;
+int left = 0;
+int right = 0;
+int sumleft = 0;
+int sumright = 0;
+
 struct node* Add(int x, struct node* tree)
 {
     if (tree == NULL) 
@@ -21,69 +25,64 @@ struct node* Add(int x, struct node* tree)
     return(tree);
 }
 
-struct node* Print(struct node* tree)
+void Print(struct node* tree)
 {
-    if (tree != NULL)
+    if (tree->left) 
     {
-       Print(tree->left);
-       printf("%d ", tree->field);
-       Print(tree->right);
+        Print(tree->left);
     }
-    return (tree);
+
+    printf("%d ", tree->field);
+
+	if(tree->right)
+    {
+        Print(tree->right);
+    }
+
 }
 
-int MaxLengthAndSum(struct node* tree, int length, int sum)
+int Sum(struct node* tree, int sum)
 {
-    int left = 0, right = 0;
-    int sumLeft = 0, sumRight = 0;
-    int curSum = sum + tree->field;
-    sum += tree->field;
-
-    if (tree->left != NULL)
+    if (tree->left) 
     {
-        left = MaxLengthAndSum(tree->left, length + 1, sum);
-        sumLeft = sum;
-        sum = curSum;
+        left++;
+        sumleft += tree->field;
+        Sum(tree->left, sumleft);
     }
 
-    if (tree->right != NULL)
+	if(tree->right)
     {
-        right = MaxLengthAndSum(tree->right, length + 1, sum);
-        sumRight = sum;
-        sum = curSum;
+        right++;
+        sumright += tree->field;
+        Sum(tree->right, sumright);
     }
 
-    if (left == 0 && right == 0) 
+    if (left < right)
     {
-        s = sum;
-        return length;
-    } else if (left > right) {
-        s = sumLeft;
-        return left;
+        return sumright;
     } else {
-        s = sumRight;
+        return sumleft;
+    }
+}
+
+int Height(struct node* tree, int length)
+{
+    int left = 0;
+    int right = 0;
+    if (tree->left != NULL) {
+        left = Height(tree->left, length + 1);
+    }
+    if (tree->right != NULL) {
+        right = Height(tree->right, length + 1);
+    }
+    if (left == 0 && right == 0) {
+        return length;
+    }
+    else if (left > right) {
+        return left;
+    }
+    else {
         return right;
     }
-}
-
-int GetLength(struct node* tree, int sum)
-{
-    if (tree)
-    {
-        int length = MaxLengthAndSum(tree, 0, sum);
-        return length;
-    } else {
-        return 0;
-    }
-}
-
-int GetSum(struct node* tree){
-    if (tree)
-    {
-        return s;
-    } else {
-        return 0;
-    }
-    
 }
 

@@ -6,5 +6,6 @@ struct node{
 };
 
 struct node* Add(int x, struct node* tree);
-struct node* Print(struct node* tree);
-int MaxLengthAndSum(struct node* tree, int length, int sum);
+int Sum(struct node* tree, int sum);
+int Height(struct node* tree, int length);
+void Print(struct node* tree);
