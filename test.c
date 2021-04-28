@@ -31,7 +31,7 @@ void Test()
     height = Height(root, 0);
     sum = Sum(root, 0);
     assert(height == 4);
-    assert(sum == 7);
+    assert(sum == 6);
 }
 
 #undef main
