@@ -19,14 +19,6 @@ void Test()
     sum = Sum(root, 0);
     assert(height == 3);
     assert(sum == 20);
-
-    root = Add(12, root);
-    root = Add(2, root);
-    root = Add(5, root);
-    height = Height(root, 0);
-    sum = Sum(root, 0);
-    assert(height == 4);
-    assert(sum == 29);
 }
 
 #undef main
