@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <malloc.h>
 #include <ctype.h>
-#include "supermarket.h"
+#include "functions.h"
 
 int ReadNumber() {
         int number;
