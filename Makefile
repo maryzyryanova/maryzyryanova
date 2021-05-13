@@ -1,7 +1,7 @@
 all: clean compileMain test
 
 compileMain: task.c
-	gcc -o main funtions.c task.c -std=c89 -lm -Werror
+	gcc -o main functions.c task.c -std=c89 -lm -Werror
 
 runMain: 
 	./task
