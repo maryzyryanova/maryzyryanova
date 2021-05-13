@@ -1,13 +1,13 @@
 all: clean compileMain test
 
 compileMain: task.c
-	gcc -o task functions.c task.c -std=c89 -lm -Werror -lstdc++
+	gcc -o task functions.c task.c -std=c89 -lm -Werror
 
 runMain: 
 	./task
 
 test: test.c
-	gcc -ftest-coverage -fprofile-arcs -O0 -o test functions.c test.c -std=c89 -lm -lstdc++
+	gcc -ftest-coverage -fprofile-arcs -O0 -o test functions.c test.c -std=c89 -lm
 	echo -1 > input.txt
 	echo 2 >> input.txt
 	echo 0 >> input.txt
@@ -56,7 +56,7 @@ test: test.c
 	echo 0 >> input.txt
 	echo 5555 >> input.txt
 	echo 11 >> input.txt
-	./test
+	./test < input.txt
 	gcov -abcfu functions.c
 
 clean:
