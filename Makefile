@@ -1,13 +1,13 @@
 all: clean compileMain test
 
 compileMain: main.c
-	gcc -o main supermarket.c main.c -std=c89 -lm -Werror
+	gcc -o main functions.c main.c -std=c89 -lm -Werror
 
 runMain: 
 	./main
 	
 test: test.c
-	gcc -ftest-coverage -fprofile-arcs -O0 -o test supermarket.c test.c -std=c89 -lm
+	gcc -ftest-coverage -fprofile-arcs -O0 -o test functions.c test.c -std=c89 -lm
 	echo -1 > input.txt
 	echo 2 >> input.txt
 	echo 0 >> input.txt
@@ -57,7 +57,7 @@ test: test.c
 	echo 5555 >> input.txt
 	echo 11 >> input.txt
 	./test < input.txt
-	gcov -abcfu supermarket.c
+	gcov -abcfu functions.c
 
 clean:
 	rm -rf Lab_7
