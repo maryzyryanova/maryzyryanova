@@ -4,28 +4,28 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-typedef struct barcode barcode;
-typedef barcode* BCode;
-
-typedef struct barcode
+struct barcode
 {
         int key;
         char* name;
         int price;
-        BCode next;
-        BCode prev;
-} barcode;
+        struct barcode* next;
+        struct barcode* prev;
+};
 
-typedef struct creditcard creditcard;
-typedef creditcard* CCard;
+#define barcode struct barcode
+typedef barcode* BCode;
 
-typedef struct creditcard
+struct creditcard
 {
         int numofcard;
         int sale;
-        CCard next;
-        CCard prev;
-} creditcard;
+        struct creditcard* next;
+        struct creditcard*  prev;
+};
+#define creditcard struct creditcard
+typedef creditcard* CCard;
+
 
 int ReadNumber();
 int ReadBarCode();
