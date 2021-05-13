@@ -1,17 +1,27 @@
-name: Codecov
-on: [push, pull_request]
+name: C/C++ CI
+
+on:
+  push:
+    branches: [ Lab7 ]
+  pull_request:
+    branches: [ Lab7 ]
+
 jobs:
-  run:
+  build:
+    
     runs-on: ubuntu-latest
+
     steps:
-      - name: Fetch
-        uses: actions/checkout@master
-      - name: Test
-        run: |
-          gcc -ftest-coverage -fprofile-arcs -O0 -o test test.c functions.c
-          ./test
-          gcov -abcfu functions.c
-      - name: Upload
-        uses: codecov/codecov-action@v1
-        with:
-          files: ./functions.c.gcov
+    - name: Fetch
+      uses: actions/checkout@master
+    - uses: actions/checkout@v2
+    - name: compile and test
+      run: | 
+        for d in */ ; do
+        make
+        done
+    - name: Upload
+      uses: codecov/codecov-action@v1
+      with: 
+       files: |
+         ./functions.c.gcov
