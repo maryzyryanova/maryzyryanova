@@ -1,10 +1,10 @@
-all: compileMain test
+all: clean compileMain test
 
 compileMain: task.c
-	gcc -o main functions.c task.c -std=c89 -lm -Werror
+	gcc -o task functions.c task.c -std=c89 -lm -Werror
 
 runMain: 
-	./task
+	./main
 	
 test: test.c
 	gcc -ftest-coverage -fprofile-arcs -O0 -o test functions.c test.c -std=c89 -lm
@@ -57,4 +57,7 @@ test: test.c
 	echo 5555 >> input.txt
 	echo 11 >> input.txt
 	./test < input.txt
-	gcov -abcfu functions.c
+	gcov -abcfu supermarket.c
+
+clean:
+	rm -rf Lab7
