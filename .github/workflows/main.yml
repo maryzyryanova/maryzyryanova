@@ -5,7 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Fetch
-        uses: actions/checkout@master
+        uses: actions/checkout@v2
       - name: Test
         run: |
           gcc -ftest-coverage -fprofile-arcs -O0 -o test test.c functions.c
