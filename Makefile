@@ -56,7 +56,7 @@ test: test.c
 	echo 0 >> input.txt
 	echo 5555 >> input.txt
 	echo 11 >> input.txt
-	./test < input.txt
+	./test
 	gcov -abcfu functions.c
 
 clean:
