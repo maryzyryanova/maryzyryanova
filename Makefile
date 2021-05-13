@@ -1,4 +1,4 @@
-all: clean compileMain test
+all: compileMain test
 
 compileMain: task.c
 	gcc -o main functions.c task.c -std=c89 -lm -Werror
@@ -58,6 +58,3 @@ test: test.c
 	echo 11 >> input.txt
 	./test < input.txt
 	gcov -abcfu functions.c
-
-clean:
-	rm -rf Lab7
