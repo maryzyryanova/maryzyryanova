@@ -1,14 +1,13 @@
 all: clean compileMain test
 
-compileMain: main.c
-	gcc -o main functions.c main.c -std=c89 -lm -Werror
+compileMain: task.c
+	gcc -o task functions.c task.c -std=c11 -lm -Werror -lstdc++
 
 runMain: 
-	./main
-	
-test: 
-	test.c
-	gcc -ftest-coverage -fprofile-arcs -O0 -o test functions.c test.c -std=c89 -lm
+	./task
+
+test: test.c
+	gcc -ftest-coverage -fprofile-arcs -O0 -o test functions.c test.c -std=c90 -lm -lstdc++
 	echo -1 > input.txt
 	echo 2 >> input.txt
 	echo 0 >> input.txt

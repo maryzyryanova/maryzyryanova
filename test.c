@@ -1,4 +1,3 @@
-#include <malloc.h>
 #include <assert.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -90,7 +89,7 @@ void testPurchaseUsingCCard(){
     assert(sum == 29);
     sum = UseCreditCard(sum, newCreditCard);
     assert(sum == 29);
-    sum = UseCreditCard(sum, newCreditCard);
+    sum = UseCreditCard(sum, newCreditCard); 
     assert(sum == 29);
 }
 
