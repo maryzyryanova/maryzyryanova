@@ -7,8 +7,8 @@ int main() {
         CCard headCC = NULL;
         int choice;
         int sum = 0;
-        FILE *outputBarCode1;
-        FILE *outputCreditCard1;
+        FILE* outputBarCode;
+        FILE* outputCreditCard;
         do {
                 system("cls");
                 printf("1. Read barcodes from file\n");
@@ -51,9 +51,9 @@ int main() {
                         system("pause");
                         break;
                 case 5:
-                        outputBarCode1 = fopen("barcode.txt", "w");
-                        SaveBarCodesInFile(headBC, outputBarCode1);
-                        fclose(outputBarCode1);
+                        outputBarCode = fopen("barcode.txt", "w");
+                        SaveBarCodesInFile(headBC, outputBarCode);
+                        fclose(outputBarCode);
                         system("pause");
                         break;
                 case 6:
@@ -73,9 +73,9 @@ int main() {
                         system("pause");
                         break;
                 case 10:
-                        outputCreditCard1 =fopen("creditcard.txt", "w");
-                        SaveCreditCardInFile(headCC, outputCreditCard1);
-                        fclose(outputCreditCard1);
+                        outputCreditCard =fopen("creditcard.txt", "w");
+                        SaveCreditCardInFile(headCC, outputCreditCard);
+                        fclose(outputCreditCard);
                         system("pause");
                         break;
                 case 11:

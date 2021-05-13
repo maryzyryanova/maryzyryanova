@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <ctype.h>
 #include <malloc.h>
+#include <ctype.h>
 #include "functions.h"
 
 int ReadNumber() {
