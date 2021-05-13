@@ -6,7 +6,8 @@ compileMain: main.c
 runMain: 
 	./main
 	
-test: test.c
+test: 
+	test.c
 	gcc -ftest-coverage -fprofile-arcs -O0 -o test functions.c test.c -std=c89 -lm
 	echo -1 > input.txt
 	echo 2 >> input.txt
