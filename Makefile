@@ -1,11 +1,11 @@
 all: clean compileMain test
 
-compileMain: task.c
+compileMain: main.c
 	gcc -o task functions.c task.c -std=c89 -lm -Werror
 
 runMain: 
 	./task
-
+	
 test: test.c
 	gcc -ftest-coverage -fprofile-arcs -O0 -o test functions.c test.c -std=c89 -lm
 	echo -1 > input.txt
@@ -60,4 +60,4 @@ test: test.c
 	gcov -abcfu functions.c
 
 clean:
-	rm -rf Lab7
+	rm -rf 
