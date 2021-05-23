@@ -8,8 +8,8 @@ typedef struct barcode
         int key;
         char* name;
         int price;
-        BCode next;
-        BCode prev;
+        struct barcode* next;
+        struct barcode* prev;
 } barcode;
 typedef struct barcode* BCode;
 
@@ -17,8 +17,8 @@ typedef struct creditcard
 {
         int numofcard;
         int sale;
-        CCard next;
-        CCard prev;
+        struct creditcard* next;
+        struct creditcard* prev;
 } creditcard;
 typedef struct creditcard* CCard;
 
