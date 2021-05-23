@@ -8,54 +8,7 @@ runMain:
 	
 test: test.c functions.c 
 	gcc -ftest-coverage -fprofile-arcs -O0 -o test functions.c test.c -std=c89 -lm
-	echo "-1\n" > input.txt
-	echo "2\n" > input.txt
-	echo "0\n" > input.txt
-	echo "123456\n" > input.txt
-	echo "-1\n" > input.txt
-	echo "20\n" > input.txt
-	echo "0\n" > input.txt
-	echo "0\n" > input.txt
-	echo "1234\n" > input.txt
-	echo "123456\n" > input.txt
-	echo "apple\n" > input.txt
-	echo "13\n" > input.txt
-	echo "123456\n" > input.txt
-	echo "apple\n" > input.txt
-	echo "13\n" > input.txt
-	echo "666666\n" > input.txt
-	echo "123456\n" > input.txt
-	echo "654321\n" > input.txt
-	echo "123456\n" > input.txt
-	echo "1121\n" > input.txt
-	echo "-1\n" > input.txt
-	echo "11\n" > input.txt
-	echo "4444\n" > input.txt
-	echo "11\n" > input.txt
-	echo "1121\n" > input.txt
-	echo "11\n" > input.txt
-	echo "4444\n" > input.txt
-	echo "4567\n" > input.txt
-	echo "1121\n" > input.txt
-	echo "4\n" > input.txt
-	echo "1\n" > input.txt
-	echo "666666\n" > input.txt
-	echo "2\n" > input.txt
-	echo "4\n" > input.txt
-	echo "1\n" > input.txt
-	echo "666666\n" > input.txt
-	echo "0\n" > input.txt
-	echo "565656\n" > input.txt
-	echo "0\n" > input.txt
-	echo "0\n" > input.txt
-	echo "4\n" > input.txt
-	echo "1\n" > input.txt
-	echo "2222\n" > input.txt
-	echo "1\n" > input.txt
-	echo "1212\n" > input.txt
-	echo "0\n" > input.txt
-	echo "5555\n" > input.txt
-	echo "11\n" > input.txt
+	echo "-1\n2\n0\n123456\n-1\n20\n0\n0\n1234\n123456\napple\n13\n123456\napple\n"13\n"666666\n123456\n654321\n123456\n1121\n-1\n11\n4444\n11\n121\n11\n4444\n4567\n1121\n4\n1\n666666\n2\n4\n1\n666666\n0\n565656\n0\n0\n4\n1\n2222\n1\n1212\n0\n5555\n11\n" > input.txt
 	./test < input.txt
 	gcov -abcfu functions.c
 
