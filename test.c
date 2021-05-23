@@ -1,10 +1,11 @@
 #include <assert.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include "functions.c"
+#include "functions.h"
 
 void testReadNumber(){
-    assert(ReadNumber() == 2);
+    int a = ReadNumber();
+    assert(a == 2);
 }
 
 void testReadBarcode(){
