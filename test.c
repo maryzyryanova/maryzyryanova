@@ -75,7 +75,7 @@ void testCreditCards(){
 }
 
 void testPurchaseUsingCCard(){
-    BCode newBarCode = NULL;
+    BCode newBarCode = 666666;
     newBarCode = ReadBarCodesFromFile(newBarCode);
     int sum = Purchase(newBarCode);
     assert(sum == 30);
