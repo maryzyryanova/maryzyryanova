@@ -1,26 +1,31 @@
-#ifndef SUPERMARKET_H
-#define SUPERMARKET_H
+#ifndef FUNCTIONS_H
+#define FUNCTIONS_H
 
 #include <stdio.h>
+#include <stdlib.h>
 
-typedef struct barcode* BCode;
-typedef struct barcode
+struct barcode
 {
         int key;
         char* name;
         int price;
-        BCode next;
-        BCode prev;
-} barcode;
+        struct barcode* next;
+        struct barcode* prev;
+};
 
-typedef struct creditcard* CCard;
-typedef struct creditcard
+#define barcode struct barcode
+typedef barcode* BCode;
+
+struct creditcard
 {
         int numofcard;
         int sale;
-        CCard next;
-        CCard prev;
-} creditcard;
+        struct creditcard* next;
+        struct creditcard*  prev;
+};
+#define creditcard struct creditcard
+typedef creditcard* CCard;
+
 
 int ReadNumber();
 int ReadBarCode();

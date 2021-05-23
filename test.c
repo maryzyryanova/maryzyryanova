@@ -9,8 +9,8 @@ void testReadNumber(){
 }
 
 void testReadBarcode(){
-    int barcode = ReadBarCode();
-    assert(barcode == 123456);
+    int bcode = ReadBarCode();
+    assert(bcode == 123456);
 }
 
 void testReadNumProduct(){
@@ -103,9 +103,9 @@ void testSavingCCardInFile(){
     int number;
     fscanf(outputCreditCard, "%d", &number);
     assert(number == 1);
-    BCode barcode =ReadBarCodesFromFile(NULL);
+    BCode bcode = ReadBarCodesFromFile(NULL);
     FILE* outputBCode = fopen("savingcard.txt", "w");
-    SaveBarCodesInFile(barcode, outputBCode);
+    SaveBarCodesInFile(bcode, outputBCode);
     fclose(outputBCode);
     outputBCode = fopen("savingcard.txt", "r");
     fscanf(outputBCode, "%d", &number);
