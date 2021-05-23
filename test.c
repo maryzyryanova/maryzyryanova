@@ -1,7 +1,7 @@
 #include <assert.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include "functions.h"
+#include "functions.c"
 
 void testReadNumber(){
     assert(ReadNumber() == 2);
