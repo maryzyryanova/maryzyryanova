@@ -4,8 +4,7 @@
 #include "functions.h"
 
 void testReadNumber(){
-    int a = ReadNumber();
-    assert(a == 2);
+    assert(ReadNumber() == 2);
 }
 
 void testReadBarcode(){
