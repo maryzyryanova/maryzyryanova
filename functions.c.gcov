@@ -1,169 +1,169 @@
         -:    0:Source:functions.c
         -:    0:Graph:functions.gcno
         -:    0:Data:functions.gcda
-        -:    0:Runs:0
-        -:    0:Programs:0
+        -:    0:Runs:1
+        -:    0:Programs:1
         -:    1:#include <stdio.h>
         -:    2:#include <stdlib.h>
         -:    3:#include <ctype.h>
         -:    4:#include "functions.h"
         -:    5:
-function ReadNumber called 0 returned 0% blocks executed 0%
-    #####:    6:int ReadNumber() {
+function ReadNumber called 3 returned 100% blocks executed 90%
+        3:    6:int ReadNumber() {
         -:    7:        int number;
-    #####:    8:        while(scanf("%d",&number)!=1 || number <= 0){
-    $$$$$:    8-block  0
-unconditional  0 never executed
-    $$$$$:    8-block  1
-unconditional  1 never executed
-    $$$$$:    8-block  2
-branch  2 never executed
-branch  3 never executed
-    $$$$$:    8-block  3
-unconditional  4 never executed
-    $$$$$:    8-block  4
-branch  5 never executed
-branch  6 never executed
-    $$$$$:    8-block  5
-unconditional  7 never executed
-    #####:    9:                printf("Incorrect input! Try again\n");
-    #####:   10:                while (getchar() != '\n') {
-    $$$$$:   10-block  0
-unconditional  0 never executed
-    $$$$$:   10-block  1
-branch  1 never executed
-branch  2 never executed
+        4:    8:        while(scanf("%d",&number)!=1 || number <= 0){
+        3:    8-block  0
+unconditional  0 taken 3
+        3:    8-block  1
+unconditional  1 taken 3
+        4:    8-block  2
+branch  2 taken 0
+branch  3 taken 4
+        4:    8-block  3
+unconditional  4 taken 4
+        4:    8-block  4
+branch  5 taken 1
+branch  6 taken 3
+        1:    8-block  5
+unconditional  7 taken 1
+        1:    9:                printf("Incorrect input! Try again\n");
+        1:   10:                while (getchar() != '\n') {
+        1:   10-block  0
+unconditional  0 taken 1
+        1:   10-block  1
+branch  1 taken 0
+branch  2 taken 1
     $$$$$:   10-block  2
 unconditional  3 never executed
         -:   11:                }
         -:   12:        }
-    #####:   13:        return number;
-    $$$$$:   13-block  0
-unconditional  0 never executed
+        3:   13:        return number;
+        3:   13-block  0
+unconditional  0 taken 3
         -:   14:}
         -:   15:
-function ReadBarCode called 0 returned 0% blocks executed 0%
-    #####:   16:int ReadBarCode(){
+function ReadBarCode called 6 returned 100% blocks executed 100%
+        6:   16:int ReadBarCode(){
         -:   17:        int number;
-    #####:   18:        printf("Write 6-digit barcode: ");
-    $$$$$:   18-block  0
-unconditional  0 never executed
-    #####:   19:        while(scanf("%d",&number)!=1 || number <= 99999 || number >= 1000000){
-    $$$$$:   19-block  0
-unconditional  0 never executed
-    $$$$$:   19-block  1
-branch  1 never executed
-branch  2 never executed
-    $$$$$:   19-block  2
-branch  3 never executed
-branch  4 never executed
-    $$$$$:   19-block  3
-unconditional  5 never executed
-    $$$$$:   19-block  4
-branch  6 never executed
-branch  7 never executed
-    $$$$$:   19-block  5
-unconditional  8 never executed
-    #####:   20:                printf("Incorrect input! Try again\n");
-    #####:   21:                while (getchar() != '\n') {
-    $$$$$:   21-block  0
-unconditional  0 never executed
-    $$$$$:   21-block  1
-branch  1 never executed
-branch  2 never executed
-    $$$$$:   21-block  2
-unconditional  3 never executed
+        6:   18:        printf("Write 6-digit barcode: ");
+        6:   18-block  0
+unconditional  0 taken 6
+        8:   19:        while(scanf("%d",&number)!=1 || number <= 99999 || number >= 1000000){
+        6:   19-block  0
+unconditional  0 taken 6
+        8:   19-block  1
+branch  1 taken 1
+branch  2 taken 7
+        7:   19-block  2
+branch  3 taken 1
+branch  4 taken 6
+        6:   19-block  3
+unconditional  5 taken 6
+        8:   19-block  4
+branch  6 taken 2
+branch  7 taken 6
+        2:   19-block  5
+unconditional  8 taken 2
+        2:   20:                printf("Incorrect input! Try again\n");
+        9:   21:                while (getchar() != '\n') {
+        2:   21-block  0
+unconditional  0 taken 2
+        9:   21-block  1
+branch  1 taken 7
+branch  2 taken 2
+        7:   21-block  2
+unconditional  3 taken 7
         -:   22:                }
         -:   23:        }
-    #####:   24:        return number;
-    $$$$$:   24-block  0
-unconditional  0 never executed
+        6:   24:        return number;
+        6:   24-block  0
+unconditional  0 taken 6
         -:   25:}
         -:   26:
-function ReadNumProduct called 0 returned 0% blocks executed 0%
-    #####:   27:int ReadNumProduct() {
+function ReadNumProduct called 2 returned 100% blocks executed 92%
+        2:   27:int ReadNumProduct() {
         -:   28:        int number;
-    #####:   29:        printf("\nWrite num of product: ");
-    $$$$$:   29-block  0
-unconditional  0 never executed
-    #####:   30:        while(scanf("%d",&number)!=1 || number < 0 || number >= 1000000){
-    $$$$$:   30-block  0
-unconditional  0 never executed
-    $$$$$:   30-block  1
-branch  1 never executed
-branch  2 never executed
-    $$$$$:   30-block  2
-branch  3 never executed
-branch  4 never executed
-    $$$$$:   30-block  3
-unconditional  5 never executed
-    $$$$$:   30-block  4
-branch  6 never executed
-branch  7 never executed
-    $$$$$:   30-block  5
-unconditional  8 never executed
-    #####:   31:                printf("Incorrect input! Try again\n");
-    #####:   32:                while (getchar() != '\n') {
-    $$$$$:   32-block  0
-unconditional  0 never executed
-    $$$$$:   32-block  1
-branch  1 never executed
-branch  2 never executed
+        2:   29:        printf("\nWrite num of product: ");
+        2:   29-block  0
+unconditional  0 taken 2
+        3:   30:        while(scanf("%d",&number)!=1 || number < 0 || number >= 1000000){
+        2:   30-block  0
+unconditional  0 taken 2
+        3:   30-block  1
+branch  1 taken 0
+branch  2 taken 3
+        3:   30-block  2
+branch  3 taken 1
+branch  4 taken 2
+        2:   30-block  3
+unconditional  5 taken 2
+        3:   30-block  4
+branch  6 taken 1
+branch  7 taken 2
+        1:   30-block  5
+unconditional  8 taken 1
+        1:   31:                printf("Incorrect input! Try again\n");
+        1:   32:                while (getchar() != '\n') {
+        1:   32-block  0
+unconditional  0 taken 1
+        1:   32-block  1
+branch  1 taken 0
+branch  2 taken 1
     $$$$$:   32-block  2
 unconditional  3 never executed
         -:   33:                }
         -:   34:        }
-    #####:   35:        if (number == 0){
-    $$$$$:   35-block  0
-branch  0 never executed
-branch  1 never executed
-    #####:   36:                return -1;
-    $$$$$:   36-block  0
-unconditional  0 never executed
+        2:   35:        if (number == 0){
+        2:   35-block  0
+branch  0 taken 1
+branch  1 taken 1
+        1:   36:                return -1;
+        1:   36-block  0
+unconditional  0 taken 1
         -:   37:        }
-    #####:   38:        return number;
-    $$$$$:   38-block  0
-unconditional  0 never executed
-    #####:   39:}
-    $$$$$:   39-block  0
-unconditional  0 never executed
+        1:   38:        return number;
+        1:   38-block  0
+unconditional  0 taken 1
+        2:   39:}
+        2:   39-block  0
+unconditional  0 taken 2
         -:   40:
-function ReadNumOfCard called 0 returned 0% blocks executed 0%
-    #####:   41:int ReadNumOfCard() {
+function ReadNumOfCard called 1 returned 100% blocks executed 90%
+        1:   41:int ReadNumOfCard() {
         -:   42:        int number;
-    #####:   43:        printf("Write 4-digit card number: ");
-    $$$$$:   43-block  0
-unconditional  0 never executed
-    #####:   44:        while(scanf("%d",&number)!=1 || number <= 999 || number >= 10000){
-    $$$$$:   44-block  0
-unconditional  0 never executed
-    $$$$$:   44-block  1
-branch  1 never executed
-branch  2 never executed
-    $$$$$:   44-block  2
-branch  3 never executed
-branch  4 never executed
-    $$$$$:   44-block  3
-unconditional  5 never executed
-    $$$$$:   44-block  4
-branch  6 never executed
-branch  7 never executed
-    $$$$$:   44-block  5
-unconditional  8 never executed
-    #####:   45:                printf("Incorrect input! Try again\n");
-    #####:   46:                while (getchar() != '\n') {
-    $$$$$:   46-block  0
-unconditional  0 never executed
-    $$$$$:   46-block  1
-branch  1 never executed
-branch  2 never executed
+        1:   43:        printf("Write 4-digit card number: ");
+        1:   43-block  0
+unconditional  0 taken 1
+        2:   44:        while(scanf("%d",&number)!=1 || number <= 999 || number >= 10000){
+        1:   44-block  0
+unconditional  0 taken 1
+        2:   44-block  1
+branch  1 taken 0
+branch  2 taken 2
+        2:   44-block  2
+branch  3 taken 1
+branch  4 taken 1
+        1:   44-block  3
+unconditional  5 taken 1
+        2:   44-block  4
+branch  6 taken 1
+branch  7 taken 1
+        1:   44-block  5
+unconditional  8 taken 1
+        1:   45:                printf("Incorrect input! Try again\n");
+        1:   46:                while (getchar() != '\n') {
+        1:   46-block  0
+unconditional  0 taken 1
+        1:   46-block  1
+branch  1 taken 0
+branch  2 taken 1
     $$$$$:   46-block  2
 unconditional  3 never executed
         -:   47:                }
         -:   48:        }
-    #####:   49:        return number;
-    $$$$$:   49-block  0
-unconditional  0 never executed
+        1:   49:        return number;
+        1:   49-block  0
+unconditional  0 taken 1
         -:   50:}
         -:   51:
 function Purchase called 0 returned 0% blocks executed 0%
@@ -431,150 +431,150 @@ unconditional  0 never executed
 unconditional  0 never executed
         -:  151:}
         -:  152:
-function ReadBarCodesFromFile called 0 returned 0% blocks executed 0%
-    #####:  153:BCode ReadBarCodesFromFile(BCode headBC) {
-    $$$$$:  153-block  0
-unconditional  0 never executed
+function ReadBarCodesFromFile called 1 returned 100% blocks executed 80%
+        1:  153:BCode ReadBarCodesFromFile(BCode headBC) {
+        1:  153-block  0
+unconditional  0 taken 1
         -:  154:        int numberofbarcodes;
-    #####:  155:        FILE *inputBarCodes = fopen("barcode.txt", "r");
-    #####:  156:        if (!inputBarCodes) {
-    $$$$$:  156-block  0
-branch  0 never executed
-branch  1 never executed
+        1:  155:        FILE *inputBarCodes = fopen("barcode.txt", "r");
+        1:  156:        if (!inputBarCodes) {
+        1:  156-block  0
+branch  0 taken 1
+branch  1 taken 0
     #####:  157:                printf("File is not found");
     #####:  158:                exit(0);
     $$$$$:  158-block  0
         -:  159:        }
-    #####:  160:        fscanf(inputBarCodes, "%d", &numberofbarcodes);
-    #####:  161:        if (headBC == NULL) {
-    $$$$$:  161-block  0
-branch  0 never executed
-branch  1 never executed
-    #####:  162:                headBC = (BCode) malloc(sizeof(barcode));
-    #####:  163:                if (headBC == NULL){
-    $$$$$:  163-block  0
-branch  0 never executed
-branch  1 never executed
+        1:  160:        fscanf(inputBarCodes, "%d", &numberofbarcodes);
+        1:  161:        if (headBC == NULL) {
+        1:  161-block  0
+branch  0 taken 1
+branch  1 taken 0
+        1:  162:                headBC = (BCode) malloc(sizeof(barcode));
+        1:  163:                if (headBC == NULL){
+        1:  163-block  0
+branch  0 taken 0
+branch  1 taken 1
     #####:  164:                        printf("Can't allocate memory");
     #####:  165:                        exit(0);
     $$$$$:  165-block  0
         -:  166:                }
-    #####:  167:                headBC->name = (char*)malloc(sizeof(char)*80);
-    #####:  168:                if (headBC->name == NULL){
-    $$$$$:  168-block  0
-branch  0 never executed
-branch  1 never executed
+        1:  167:                headBC->name = (char*)malloc(sizeof(char)*80);
+        1:  168:                if (headBC->name == NULL){
+        1:  168-block  0
+branch  0 taken 0
+branch  1 taken 1
     #####:  169:                        printf("Can't allocate memory");
     #####:  170:                        exit(0);
     $$$$$:  170-block  0
         -:  171:                }
-    #####:  172:                headBC->next = NULL;
-    #####:  173:                headBC->prev = NULL;
-    #####:  174:                fscanf(inputBarCodes, "%d%s%d", &(headBC->key), (headBC->name), &(headBC->price));
-    #####:  175:                numberofbarcodes--;
-    #####:  176:        }
-    $$$$$:  176-block  0
-unconditional  0 never executed
-    #####:  177:        BCode current = headBC;
+        1:  172:                headBC->next = NULL;
+        1:  173:                headBC->prev = NULL;
+        1:  174:                fscanf(inputBarCodes, "%d%s%d", &(headBC->key), (headBC->name), &(headBC->price));
+        1:  175:                numberofbarcodes--;
+        1:  176:        }
+        1:  176-block  0
+unconditional  0 taken 1
+        1:  177:        BCode current = headBC;
         -:  178:        int i;
-    #####:  179:        for(i = 0; i < numberofbarcodes; i++) {
-    $$$$$:  179-block  0
-unconditional  0 never executed
-    $$$$$:  179-block  1
-branch  1 never executed
-branch  2 never executed
-    $$$$$:  179-block  2
-unconditional  3 never executed
+        4:  179:        for(i = 0; i < numberofbarcodes; i++) {
+        1:  179-block  0
+unconditional  0 taken 1
+        4:  179-block  1
+branch  1 taken 3
+branch  2 taken 1
+        3:  179-block  2
+unconditional  3 taken 3
         -:  180:                int key;
-    #####:  181:                char* name = (char*)malloc(sizeof(char)*80);
-    #####:  182:                if (name == NULL){
-    $$$$$:  182-block  0
-branch  0 never executed
-branch  1 never executed
+        3:  181:                char* name = (char*)malloc(sizeof(char)*80);
+        3:  182:                if (name == NULL){
+        3:  182-block  0
+branch  0 taken 0
+branch  1 taken 3
     #####:  183:                        printf("Can't allocate memory");
     #####:  184:                        exit(0);
     $$$$$:  184-block  0
         -:  185:                }
         -:  186:                int price;
-    #####:  187:                int alreadyhave = 0;
-    #####:  188:                fscanf(inputBarCodes, "%d%s%d", &key, name, &price);
-    #####:  189:                BCode newcurrent = headBC;
-    #####:  190:                while (newcurrent != NULL) {
-    $$$$$:  190-block  0
-unconditional  0 never executed
-    $$$$$:  190-block  1
-branch  1 never executed
-branch  2 never executed
-    $$$$$:  190-block  2
-unconditional  3 never executed
-    #####:  191:                        if (newcurrent->key == key) {
-    $$$$$:  191-block  0
-branch  0 never executed
-branch  1 never executed
-    #####:  192:                                alreadyhave = 1;
-    #####:  193:                                free (name);
-    #####:  194:                                break;
-    $$$$$:  194-block  0
-unconditional  0 never executed
+        3:  187:                int alreadyhave = 0;
+        3:  188:                fscanf(inputBarCodes, "%d%s%d", &key, name, &price);
+        3:  189:                BCode newcurrent = headBC;
+        6:  190:                while (newcurrent != NULL) {
+        3:  190-block  0
+unconditional  0 taken 3
+        6:  190-block  1
+branch  1 taken 4
+branch  2 taken 2
+        3:  190-block  2
+unconditional  3 taken 3
+        4:  191:                        if (newcurrent->key == key) {
+        4:  191-block  0
+branch  0 taken 1
+branch  1 taken 3
+        1:  192:                                alreadyhave = 1;
+        1:  193:                                free (name);
+        1:  194:                                break;
+        1:  194-block  0
+unconditional  0 taken 1
         -:  195:                        }
-    #####:  196:                        newcurrent = newcurrent->next;
+        3:  196:                        newcurrent = newcurrent->next;
         -:  197:                }
-    #####:  198:                if (alreadyhave == 0) {
-    $$$$$:  198-block  0
-branch  0 never executed
-branch  1 never executed
-    #####:  199:                        BCode current = (BCode) malloc(sizeof(barcode));
-    #####:  200:                        if (current == NULL){
-    $$$$$:  200-block  0
-branch  0 never executed
-branch  1 never executed
+        3:  198:                if (alreadyhave == 0) {
+        3:  198-block  0
+branch  0 taken 2
+branch  1 taken 1
+        2:  199:                        BCode current = (BCode) malloc(sizeof(barcode));
+        2:  200:                        if (current == NULL){
+        2:  200-block  0
+branch  0 taken 0
+branch  1 taken 2
     #####:  201:                                printf("Can't allocate memory");
     #####:  202:                                exit(0);
     $$$$$:  202-block  0
         -:  203:                        }
-    #####:  204:                        current->next = headBC;
-    #####:  205:                        current->prev = NULL;
-    #####:  206:                        headBC->prev = current;
-    #####:  207:                        headBC = current;
-    #####:  208:                        current->key = key;
-    #####:  209:                        current->name = name;
-    #####:  210:                        current->price = price;
-    #####:  211:                }
-    $$$$$:  211-block  0
-unconditional  0 never executed
-    #####:  212:        }
-    $$$$$:  212-block  0
-unconditional  0 never executed
-    #####:  213:        fclose(inputBarCodes);
-    #####:  214:        printf("OK\n");
-    #####:  215:        return headBC;
-    $$$$$:  215-block  0
-unconditional  0 never executed
+        2:  204:                        current->next = headBC;
+        2:  205:                        current->prev = NULL;
+        2:  206:                        headBC->prev = current;
+        2:  207:                        headBC = current;
+        2:  208:                        current->key = key;
+        2:  209:                        current->name = name;
+        2:  210:                        current->price = price;
+        2:  211:                }
+        2:  211-block  0
+unconditional  0 taken 2
+        3:  212:        }
+        3:  212-block  0
+unconditional  0 taken 3
+        1:  213:        fclose(inputBarCodes);
+        1:  214:        printf("OK\n");
+        1:  215:        return headBC;
+        1:  215-block  0
+unconditional  0 taken 1
         -:  216:}
         -:  217:
-function AddNewBarCode called 0 returned 0% blocks executed 0%
-    #####:  218:BCode AddNewBarCode(BCode head)
-    $$$$$:  218-block  0
-unconditional  0 never executed
+function AddNewBarCode called 2 returned 100% blocks executed 58%
+        2:  218:BCode AddNewBarCode(BCode head)
+        2:  218-block  0
+unconditional  0 taken 2
         -:  219:{
         -:  220:        int key, price;
-    #####:  221:        char* name = (char*)malloc(sizeof(char)*80);
-    #####:  222:        if (name == NULL){
-    $$$$$:  222-block  0
-branch  0 never executed
-branch  1 never executed
+        2:  221:        char* name = (char*)malloc(sizeof(char)*80);
+        2:  222:        if (name == NULL){
+        2:  222-block  0
+branch  0 taken 0
+branch  1 taken 2
     #####:  223:                printf("Can't allocate memory");
     #####:  224:                exit(0);
     $$$$$:  224-block  0
         -:  225:        }
-    #####:  226:        key = ReadBarCode();
-    #####:  227:        printf("\nName: ");
-    #####:  228:        while (scanf("%s", name)!=1){
-    $$$$$:  228-block  0
-unconditional  0 never executed
-    $$$$$:  228-block  1
-branch  1 never executed
-branch  2 never executed
+        2:  226:        key = ReadBarCode();
+        2:  227:        printf("\nName: ");
+        2:  228:        while (scanf("%s", name)!=1){
+        2:  228-block  0
+unconditional  0 taken 2
+        2:  228-block  1
+branch  1 taken 0
+branch  2 taken 2
     $$$$$:  228-block  2
 unconditional  3 never executed
     #####:  229:                printf("Incorrect input! Try again\n");
@@ -588,147 +588,147 @@ branch  2 never executed
 unconditional  3 never executed
         -:  231:                }
         -:  232:        }
-    #####:  233:        printf("Price: ");
-    #####:  234:        price = ReadNumber();
-    #####:  235:        if (head == NULL) {
-    $$$$$:  235-block  0
-branch  0 never executed
-branch  1 never executed
-    #####:  236:                head = (barcode*) malloc(sizeof(barcode));
-    #####:  237:                if (head == NULL){
-    $$$$$:  237-block  0
-branch  0 never executed
-branch  1 never executed
+        2:  233:        printf("Price: ");
+        2:  234:        price = ReadNumber();
+        2:  235:        if (head == NULL) {
+        2:  235-block  0
+branch  0 taken 1
+branch  1 taken 1
+        1:  236:                head = (barcode*) malloc(sizeof(barcode));
+        1:  237:                if (head == NULL){
+        1:  237-block  0
+branch  0 taken 0
+branch  1 taken 1
     #####:  238:                        printf("Can't allocate memory");
     #####:  239:                        exit(0);
     $$$$$:  239-block  0
         -:  240:                }
-    #####:  241:                head->next = NULL;
-    #####:  242:                head->prev = NULL;
-    #####:  243:                head->key = key;
-    #####:  244:                head->name = name;
-    #####:  245:                head->price = price;
-    #####:  246:        }
-    $$$$$:  246-block  0
-unconditional  0 never executed
+        1:  241:                head->next = NULL;
+        1:  242:                head->prev = NULL;
+        1:  243:                head->key = key;
+        1:  244:                head->name = name;
+        1:  245:                head->price = price;
+        1:  246:        }
+        1:  246-block  0
+unconditional  0 taken 1
         -:  247:        else {
-    #####:  248:                BCode current = (barcode*) malloc(sizeof(barcode));
-    #####:  249:                if (current == NULL){
-    $$$$$:  249-block  0
-branch  0 never executed
-branch  1 never executed
+        1:  248:                BCode current = (barcode*) malloc(sizeof(barcode));
+        1:  249:                if (current == NULL){
+        1:  249-block  0
+branch  0 taken 0
+branch  1 taken 1
     #####:  250:                        printf("Can't allocate memory");
     #####:  251:                        exit(0);
     $$$$$:  251-block  0
         -:  252:                }
-    #####:  253:                current->next = head;
-    #####:  254:                current->prev = NULL;
-    #####:  255:                head->prev = current;
-    #####:  256:                head = current;
-    #####:  257:                current->key = key;
-    #####:  258:                current->name = name;
-    #####:  259:                current->price = price;
-    $$$$$:  259-block  0
-unconditional  0 never executed
+        1:  253:                current->next = head;
+        1:  254:                current->prev = NULL;
+        1:  255:                head->prev = current;
+        1:  256:                head = current;
+        1:  257:                current->key = key;
+        1:  258:                current->name = name;
+        1:  259:                current->price = price;
+        1:  259-block  0
+unconditional  0 taken 1
         -:  260:        }
-    #####:  261:        return head;
-    $$$$$:  261-block  0
-unconditional  0 never executed
+        2:  261:        return head;
+        2:  261-block  0
+unconditional  0 taken 2
         -:  262:}
         -:  263:
-function ShowBarCode called 0 returned 0% blocks executed 0%
-    #####:  264:void ShowBarCode(BCode head) {
-    $$$$$:  264-block  0
-unconditional  0 never executed
-    #####:  265:        BCode current = head;
-    #####:  266:        if (current == NULL)
-    $$$$$:  266-block  0
-branch  0 never executed
-branch  1 never executed
+function ShowBarCode called 5 returned 100% blocks executed 100%
+        5:  264:void ShowBarCode(BCode head) {
+        5:  264-block  0
+unconditional  0 taken 5
+        5:  265:        BCode current = head;
+        5:  266:        if (current == NULL)
+        5:  266-block  0
+branch  0 taken 2
+branch  1 taken 3
         -:  267:        {
-    #####:  268:                printf("List of barcodes is empty\n");
-    #####:  269:        }
-    $$$$$:  269-block  0
-unconditional  0 never executed
+        2:  268:                printf("List of barcodes is empty\n");
+        2:  269:        }
+        2:  269-block  0
+unconditional  0 taken 2
         -:  270:        else {
-    #####:  271:                while (current != NULL)
-    $$$$$:  271-block  0
-unconditional  0 never executed
-    $$$$$:  271-block  1
-branch  1 never executed
-branch  2 never executed
-    $$$$$:  271-block  2
-unconditional  3 never executed
+       11:  271:                while (current != NULL)
+        3:  271-block  0
+unconditional  0 taken 3
+       11:  271-block  1
+branch  1 taken 8
+branch  2 taken 3
+        8:  271-block  2
+unconditional  3 taken 8
         -:  272:                {
-    #####:  273:                        printf("%d %s price: %d\n", current->key, current->name, current->price);
-    #####:  274:                        current = current->next;
+        8:  273:                        printf("%d %s price: %d\n", current->key, current->name, current->price);
+        8:  274:                        current = current->next;
         -:  275:                }
         -:  276:        }
-    #####:  277:}
-    $$$$$:  277-block  0
-unconditional  0 never executed
+        5:  277:}
+        5:  277-block  0
+unconditional  0 taken 5
         -:  278:
-function DeleteBarCode called 0 returned 0% blocks executed 0%
-    #####:  279:BCode DeleteBarCode(BCode head) {
-    $$$$$:  279-block  0
-unconditional  0 never executed
-    #####:  280:        ShowBarCode(head);
-    #####:  281:        if (head == NULL) {
-    $$$$$:  281-block  0
-branch  0 never executed
-branch  1 never executed
-    #####:  282:                return head;
-    $$$$$:  282-block  0
-unconditional  0 never executed
+function DeleteBarCode called 5 returned 100% blocks executed 79%
+        5:  279:BCode DeleteBarCode(BCode head) {
+        5:  279-block  0
+unconditional  0 taken 5
+        5:  280:        ShowBarCode(head);
+        5:  281:        if (head == NULL) {
+        5:  281-block  0
+branch  0 taken 2
+branch  1 taken 3
+        2:  282:                return head;
+        2:  282-block  0
+unconditional  0 taken 2
         -:  283:        }
-    #####:  284:        int deletekey = ReadBarCode();
-    #####:  285:        BCode current = head;
-    #####:  286:        while (current != NULL && current->key != deletekey) {
-    $$$$$:  286-block  0
-unconditional  0 never executed
-    $$$$$:  286-block  1
-branch  1 never executed
-branch  2 never executed
-    $$$$$:  286-block  2
-unconditional  3 never executed
-    $$$$$:  286-block  3
-branch  4 never executed
-branch  5 never executed
-    $$$$$:  286-block  4
-unconditional  6 never executed
-    #####:  287:                current = current->next;
+        3:  284:        int deletekey = ReadBarCode();
+        3:  285:        BCode current = head;
+        6:  286:        while (current != NULL && current->key != deletekey) {
+        3:  286-block  0
+unconditional  0 taken 3
+        6:  286-block  1
+branch  1 taken 5
+branch  2 taken 1
+        5:  286-block  2
+unconditional  3 taken 5
+        6:  286-block  3
+branch  4 taken 3
+branch  5 taken 3
+        3:  286-block  4
+unconditional  6 taken 3
+        3:  287:                current = current->next;
         -:  288:        }
-    #####:  289:        if (current == NULL) {
-    $$$$$:  289-block  0
-branch  0 never executed
-branch  1 never executed
-    #####:  290:                printf("\nThis code doesn't exist\n");
-    #####:  291:                return head;
-    $$$$$:  291-block  0
-unconditional  0 never executed
+        3:  289:        if (current == NULL) {
+        3:  289-block  0
+branch  0 taken 1
+branch  1 taken 2
+        1:  290:                printf("\nThis code doesn't exist\n");
+        1:  291:                return head;
+        1:  291-block  0
+unconditional  0 taken 1
         -:  292:        }
-    #####:  293:        else if (current == head && head->next == NULL) {
-    $$$$$:  293-block  0
-branch  0 never executed
-branch  1 never executed
-    $$$$$:  293-block  1
-branch  2 never executed
-branch  3 never executed
-    #####:  294:                free(current->name);
-    #####:  295:                head = NULL;
-    #####:  296:        }
-    $$$$$:  296-block  0
-unconditional  0 never executed
-    #####:  297:        else if (current == head) {
-    $$$$$:  297-block  0
-branch  0 never executed
-branch  1 never executed
-    #####:  298:                free(current->name);
-    #####:  299:                head = head->next;
-    #####:  300:                head->prev = NULL;
-    #####:  301:        }
-    $$$$$:  301-block  0
-unconditional  0 never executed
+        2:  293:        else if (current == head && head->next == NULL) {
+        2:  293-block  0
+branch  0 taken 2
+branch  1 taken 0
+        2:  293-block  1
+branch  2 taken 1
+branch  3 taken 1
+        1:  294:                free(current->name);
+        1:  295:                head = NULL;
+        1:  296:        }
+        1:  296-block  0
+unconditional  0 taken 1
+        1:  297:        else if (current == head) {
+        1:  297-block  0
+branch  0 taken 1
+branch  1 taken 0
+        1:  298:                free(current->name);
+        1:  299:                head = head->next;
+        1:  300:                head->prev = NULL;
+        1:  301:        }
+        1:  301-block  0
+unconditional  0 taken 1
         -:  302:        else {
     #####:  303:                free(current->name);
     #####:  304:                if (current->prev != NULL){
@@ -748,13 +748,13 @@ branch  1 never executed
     $$$$$:  309-block  0
 unconditional  0 never executed
         -:  310:        }
-    #####:  311:        printf("\nOK\n");
-    #####:  312:        return head;
-    $$$$$:  312-block  0
-unconditional  0 never executed
-    #####:  313:}
-    $$$$$:  313-block  0
-unconditional  0 never executed
+        2:  311:        printf("\nOK\n");
+        2:  312:        return head;
+        2:  312-block  0
+unconditional  0 taken 2
+        5:  313:}
+        5:  313-block  0
+unconditional  0 taken 5
         -:  314:
 function SaveBarCodesInFile called 0 returned 0% blocks executed 0%
     #####:  315:void SaveBarCodesInFile(BCode headBC, FILE* outputBarCode) {
@@ -799,19 +799,19 @@ unconditional  3 never executed
     $$$$$:  333-block  0
 unconditional  0 never executed
         -:  334:
-function ReadCreditCardsFromFile called 0 returned 0% blocks executed 0%
-    #####:  335:CCard ReadCreditCardsFromFile(CCard headCC) {
-    $$$$$:  335-block  0
-unconditional  0 never executed
+function ReadCreditCardsFromFile called 1 returned 0% blocks executed 9%
+        1:  335:CCard ReadCreditCardsFromFile(CCard headCC) {
+        1:  335-block  0
+unconditional  0 taken 1
         -:  336:        int numberofcards;
-    #####:  337:        FILE* inputCreditCard = fopen("creditcard.txt", "r");
-    #####:  338:        if (!inputCreditCard) {
-    $$$$$:  338-block  0
-branch  0 never executed
-branch  1 never executed
-    #####:  339:                printf("File is not found");
-    #####:  340:                exit(0);
-    $$$$$:  340-block  0
+        1:  337:        FILE* inputCreditCard = fopen("creditcard.txt", "r");
+        1:  338:        if (!inputCreditCard) {
+        1:  338-block  0
+branch  0 taken 0
+branch  1 taken 1
+        1:  339:                printf("File is not found");
+        1:  340:                exit(0);
+        1:  340-block  0
         -:  341:        }
     #####:  342:        fscanf(inputCreditCard, "%d", &numberofcards);
     #####:  343:        if (headCC == NULL) {
