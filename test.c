@@ -1,3 +1,4 @@
+#include <malloc.h>
 #include <assert.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -6,11 +7,11 @@
 void testReadNumber(){
     int a = ReadNumber();
     assert(a == 2);
-} 
+}
 
 void testReadBarcode(){
-    int bcode= ReadBarCode();
-    assert(bcode == 123456);
+    int barcode = ReadBarCode();
+    assert(barcode == 123456);
 }
 
 void testReadNumProduct(){
@@ -24,8 +25,6 @@ void testReadNumOfCard(){
     int numOfCard = ReadNumOfCard();
     assert(numOfCard == 1234);
 }
-
-
 
 void testBarCodes(){
     BCode newBarCode = NULL;
@@ -91,7 +90,7 @@ void testPurchaseUsingCCard(){
     assert(sum == 29);
     sum = UseCreditCard(sum, newCreditCard);
     assert(sum == 29);
-    sum = UseCreditCard(sum, newCreditCard); 
+    sum = UseCreditCard(sum, newCreditCard);
     assert(sum == 29);
 }
 
@@ -104,9 +103,9 @@ void testSavingCCardInFile(){
     int number;
     fscanf(outputCreditCard, "%d", &number);
     assert(number == 1);
-    BCode bcode = ReadBarCodesFromFile(NULL);
+    BCode barcode =ReadBarCodesFromFile(NULL);
     FILE* outputBCode = fopen("savingcard.txt", "w");
-    SaveBarCodesInFile(bcode, outputBCode);
+    SaveBarCodesInFile(barcode, outputBCode);
     fclose(outputBCode);
     outputBCode = fopen("savingcard.txt", "r");
     fscanf(outputBCode, "%d", &number);
