@@ -1,6 +1,6 @@
 all: clean compileMain test
 
-compileMain: main.c
+compileMain: task.c
 	gcc -o task functions.c task.c -std=c89 -lm -Werror
 
 runMain: 
