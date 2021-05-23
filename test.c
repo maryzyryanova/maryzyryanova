@@ -75,7 +75,7 @@ void testCreditCards(){
 }
 
 void testPurchaseUsingCCard(){
-    BCode newBarCode = 666666;
+    BCode newBarCode = NULL;
     newBarCode = ReadBarCodesFromFile(newBarCode);
     int sum = Purchase(newBarCode);
     assert(sum == 30);
@@ -96,6 +96,7 @@ void testPurchaseUsingCCard(){
 void testSavingCCardInFile(){
     CCard headCC = AddNewCreditCard(NULL);
     FILE* outputCreditCard =fopen("savingcard.txt", "w");
+    SaveCreditCardInFile(headCC, NULL);
     SaveCreditCardInFile(headCC, outputCreditCard);
     fclose(outputCreditCard);
     outputCreditCard =fopen("savingcard.txt", "r");
