@@ -17,9 +17,7 @@ jobs:
     - uses: actions/checkout@v2
     - name: compile and test
       run: | 
-        do
-        make -C "$d"
-        done
+        make
     - name: Upload
       uses: codecov/codecov-action@v1
       with: 
