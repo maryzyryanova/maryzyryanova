@@ -60,4 +60,4 @@ test: test.c
 	gcov -abcfu functions.c
 
 clean:
-	rm -rf 
+	rm -rf Lab7
