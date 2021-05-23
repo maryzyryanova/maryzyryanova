@@ -3,9 +3,7 @@
 
 #include <stdio.h>
 
-typedef struct barcode barcode;
-typedef barcode* BCode;
-
+typedef struct barcode* BCode;
 typedef struct barcode
 {
         int key;
@@ -15,9 +13,7 @@ typedef struct barcode
         BCode prev;
 } barcode;
 
-typedef struct creditcard creditcard;
-typedef creditcard* CCard;
-
+typedef struct creditcard* CCard;
 typedef struct creditcard
 {
         int numofcard;
