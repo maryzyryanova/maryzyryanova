@@ -77,10 +77,12 @@ void testCreditCards(){
 void testPurchaseUsingCCard(){
     BCode newBarCode = NULL;
     newBarCode = ReadBarCodesFromFile(newBarCode);
-    assert(Purchase(newBarCode) == 30);
-    assert(Purchase(newBarCode) == 0);
+    int sum = Purchase(newBarCode);
+    assert(sum == 30);
+    sum = Purchase(newBarCode);
+    assert(sum == 0);
     CCard newCreditCard = ReadCreditCardsFromFile(NULL);
-    int sum = UseCreditCard(sum, newCreditCard);
+    sum = UseCreditCard(sum, newCreditCard);
     assert(sum == 0);
     sum = 30;
     sum = UseCreditCard(sum, newCreditCard);
