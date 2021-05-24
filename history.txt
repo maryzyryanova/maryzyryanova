@@ -1,4 +1,3 @@
-
 apple x 2 = 30
 DISCOUNT 2%
 FINAL SUM 29
