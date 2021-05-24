@@ -1,5 +1,5 @@
-#ifndef SUPERMARKET_H
-#define SUPERMARKET_H
+#ifndef FUNCTIONS_H
+#define FUNCTIONS_H
 
 #include <stdio.h>
 
