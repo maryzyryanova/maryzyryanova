@@ -3,5 +3,6 @@
         "functions.h": "c",
         "assert.h": "c",
         "stdlib.h": "c"
-    }
+    },
+    "C_Cpp.errorSquiggles": "Disabled"
 }

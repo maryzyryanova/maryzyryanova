@@ -75,10 +75,10 @@ void testCreditCards(){
 }
 
 void testPurchaseUsingCCard(){
-    BCode newBarCode = ReadBarCodesFromFile(NULL);
+    BCode newBarCode = NULL;
+    newBarCode = ReadBarCodesFromFile(newBarCode);
     int sum = Purchase(newBarCode);
     assert(sum == 30);
-    newBarCode = ReadBarCodesFromFile(newBarCode);
     sum = Purchase(newBarCode);
     assert(sum == 0);
     CCard newCreditCard = ReadCreditCardsFromFile(NULL);
