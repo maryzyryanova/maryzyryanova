@@ -2,30 +2,25 @@
 #define FUNCTIONS_H
 
 #include <stdio.h>
-#include <stdlib.h>
 
-struct barcode
+typedef struct barcode
 {
         int key;
         char* name;
         int price;
         struct barcode* next;
         struct barcode* prev;
-};
+} barcode;
+typedef struct barcode* BCode;
 
-#define barcode struct barcode
-typedef barcode* BCode;
-
-struct creditcard
+typedef struct creditcard
 {
         int numofcard;
         int sale;
         struct creditcard* next;
-        struct creditcard*  prev;
-};
-#define creditcard struct creditcard
-typedef creditcard* CCard;
-
+        struct creditcard* prev;
+} creditcard;
+typedef struct creditcard* CCard;
 
 int ReadNumber();
 int ReadBarCode();

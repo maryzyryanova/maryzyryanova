@@ -6,10 +6,10 @@
 void testReadNumber(){
     int a = ReadNumber();
     assert(a == 2);
-} 
+}
 
 void testReadBarcode(){
-    int bcode= ReadBarCode();
+    int bcode = ReadBarCode();
     assert(bcode == 123456);
 }
 
@@ -24,8 +24,6 @@ void testReadNumOfCard(){
     int numOfCard = ReadNumOfCard();
     assert(numOfCard == 1234);
 }
-
-
 
 void testBarCodes(){
     BCode newBarCode = NULL;
@@ -77,12 +75,9 @@ void testCreditCards(){
 }
 
 void testPurchaseUsingCCard(){
-    BCode newBarCode = NULL;
-    newBarCode = ReadBarCodesFromFile(newBarCode);
+    BCode newBarCode = ReadBarCodesFromFile(NULL);
     int sum = Purchase(newBarCode);
     assert(sum == 30);
-    sum = Purchase(newBarCode);
-    assert(sum == 0);
     CCard newCreditCard = ReadCreditCardsFromFile(NULL);
     sum = UseCreditCard(sum, newCreditCard);
     assert(sum == 0);
@@ -91,13 +86,14 @@ void testPurchaseUsingCCard(){
     assert(sum == 29);
     sum = UseCreditCard(sum, newCreditCard);
     assert(sum == 29);
-    sum = UseCreditCard(sum, newCreditCard); 
+    sum = UseCreditCard(sum, newCreditCard);
     assert(sum == 29);
 }
 
 void testSavingCCardInFile(){
     CCard headCC = AddNewCreditCard(NULL);
     FILE* outputCreditCard =fopen("savingcard.txt", "w");
+    SaveCreditCardInFile(headCC, NULL);
     SaveCreditCardInFile(headCC, outputCreditCard);
     fclose(outputCreditCard);
     outputCreditCard =fopen("savingcard.txt", "r");
@@ -105,7 +101,9 @@ void testSavingCCardInFile(){
     fscanf(outputCreditCard, "%d", &number);
     assert(number == 1);
     BCode bcode = ReadBarCodesFromFile(NULL);
-    FILE* outputBCode = fopen("savingcard.txt", "w");
+    FILE* outputBCode = NULL;
+    SaveBarCodesInFile(bcode, outputBCode);
+    outputBCode = fopen("savingcard.txt", "w");
     SaveBarCodesInFile(bcode, outputBCode);
     fclose(outputBCode);
     outputBCode = fopen("savingcard.txt", "r");

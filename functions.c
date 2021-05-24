@@ -52,7 +52,7 @@ int ReadNumOfCard() {
 int Purchase(BCode headbarcode) {
         int sum = 0;
         int choiceproduct = 1;
-        FILE *outputHistory = fopen("history.txt", "a");
+        FILE* outputHistory = fopen("history.txt", "a");
         if (outputHistory == NULL) {
             printf("File is not found");
             exit(0);
