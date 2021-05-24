@@ -1,7 +1,8 @@
 #include <assert.h>
 #include <stdio.h>
+#include <malloc.h>
 #include <stdlib.h>
-#include "functions.h"
+#include "functions.c"
 
 void testReadNumber(){
     int a = ReadNumber();
@@ -75,12 +76,9 @@ void testCreditCards(){
 }
 
 void testPurchaseUsingCCard(){
-    BCode newBarCode = NULL;
-    newBarCode = ReadBarCodesFromFile(newBarCode);
+    BCode newBarCode = ReadBarCodesFromFile(NULL);
     int sum = Purchase(newBarCode);
     assert(sum == 30);
-    sum = Purchase(newBarCode);
-    assert(sum == 0);
     CCard newCreditCard = ReadCreditCardsFromFile(NULL);
     sum = UseCreditCard(sum, newCreditCard);
     assert(sum == 0);
