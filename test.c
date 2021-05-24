@@ -1,7 +1,7 @@
 #include <assert.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include "functions.c"
+#include "functions.h"
 
 void testReadNumber(){
     int a = ReadNumber();
@@ -101,7 +101,9 @@ void testSavingCCardInFile(){
     fscanf(outputCreditCard, "%d", &number);
     assert(number == 1);
     BCode bcode = ReadBarCodesFromFile(NULL);
-    FILE* outputBCode = fopen("savingcard.txt", "w");
+    FILE* outputBCode = NULL;
+    SaveBarCodesInFile(bcode, outputBCode);
+    outputBCode = fopen("savingcard.txt", "w");
     SaveBarCodesInFile(bcode, outputBCode);
     fclose(outputBCode);
     outputBCode = fopen("savingcard.txt", "r");
